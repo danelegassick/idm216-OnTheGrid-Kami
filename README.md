@@ -1,6 +1,11 @@
 # idm216-OnTheGrid-Kami
 Collaborative repo for idm216 UX design II
 
+* LIVE: ~link~
+* DEV: ~link~
+
+## Gitignore
+
 ## Editor Setup
 * Use your preferred editor (project build through VSC)
   * DO NOT auto format `(beautify)` code before syncing formatting rules with team members
