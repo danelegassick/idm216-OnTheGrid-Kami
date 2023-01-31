@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <title>Project Details</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="mobilenav">
+        <div class="titles">
+            <img src="assets/images/kami-logo.png" alt="kami-logo" class="logo">
+            <h1 class="page-title">on the grid<br>idm 216</h1>
+        </div>
+        <div class="topbar">
+            <a class="mobilelink" href="#userpersonas">User Personas</a>
+            <a class="mobilelink" href="#styletile">Style Tile</a>
+            <a class="mobilelink" href="#criticalmap">Critical Map</a>
+            <a class="mobilelink" href="#moodboard">Mood Board</a>
+        </div>
+    </div>
     <div class="sidebar">
         <img src="assets/images/kami-logo.png" alt="kami-logo" class="logo">
         <h1 class="page-title">on the grid<br>idm 216</h1>
-        <a href="#">User Personas</a>
-        <a href="#">Style Tile</a>
-        <a href="#">Critical Map</a>
-        <a href="#">Mood Board</a>
+        <a href="#userpersonas">User Personas</a>
+        <a href="#styletile">Style Tile</a>
+        <a href="#criticalmap">Critical Map</a>
+        <a href="#moodboard">Mood Board</a>
     </div>
     <div class="main-content">
         <section class="content-section">
-            <div class="grid-2-col">
+            <div id="userpersonas" class="grid-2-col">
                 <div class="names">
-                    <ul>
-                        <li><a href="#slide-1">Thuy Pham</a></li>
-                        <li><a href="#slide-2">Caleb Lewis</a></li>
-                        <li><a href="#slide-3">Michael Lopez</a></li>
+                    <ul class="personas">
+                        <li data-persona-target="#pham" class="active persona">Thuy Pham</li>
+                        <li data-persona-target="#lewis" class="persona">Caleb Lewis</li>
+                        <li data-persona-target="#lopez" class="persona">Michael Lopez</li>
                     </ul>
                 </div>
                 <div class="section-title">
@@ -35,92 +48,130 @@
                     <h2 class="title-text">User Personas</h2>
                 </div>
             </div>
-            <!-- Carousel -->
-        <picture>
-            <source srcset="assets/images/Thuy Pham - Desktop.png" media="(min-width: 75em)">
-            <source srcset="assets/images/Thuy Pham - Tablet.png" media="(min-width: 40em)">
-            <img src="assets/images/Thuy Pham - Desktop.png" alt="A description of the image." 
-               loading="lazy" decoding="async">
-          </picture>
-        </section>
-        <section class="content-section">
-            <div class="grid-2-col">
-                <div class="names">
-                    <ul>
-                        <li><a href="#slide-1">Thuy Pham</a></li>
-                        <li><a href="#slide-2">Caleb Lewis</a></li>
-                        <li><a href="#slide-3">Michael Lopez</a></li>
-                    </ul>
+            <div class="persona-content">
+                <div id="pham"  data-persona-content class="active">
+                    <picture>
+                        <source srcset="assets/images/Thuy Pham - Desktop.png" media="(min-width: 75em)">
+                        <source srcset="assets/images/Thuy Pham - Tablet.png" media="(min-width: 40em)">
+                        <img src="assets/images/Thuy Pham - Desktop.png" alt="Persona of Thuy Pham." 
+                           loading="lazy" decoding="async">
+                    </picture>
                 </div>
-                <div class="section-title">
-                    <svg width="443" height="110" viewBox="0 0 443 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.15597 19.0053C15.342 10.2107 46.827 -1.83679 75.2787 20.3298C86.0343 28.0427 115.988 37.9869 149.759 16.0612C160.79 8.74845 190.208 -1.23274 219.628 17.3443C231.865 26.2117 266.586 38.498 307.569 16.7047C320.492 8.6752 353.686 -2.2888 383.072 18.0913C393.793 27.6824 420.727 42.4561 442.695 24.8228" stroke="#171616" stroke-width="7.82305"/>
-                        <path d="M3.15597 55.0728C15.342 46.2782 46.827 34.2307 75.2787 56.3974C86.0343 64.1102 115.988 74.0545 149.759 52.1287C160.79 44.816 190.208 34.8348 219.628 53.4118C231.865 62.2792 266.586 74.5655 307.569 52.7722C320.492 44.7427 353.686 33.7787 383.072 54.1588C393.793 63.7499 420.727 78.5237 442.695 60.8903" stroke="#171616" stroke-width="7.82305"/>
-                        <path d="M3.15597 91.1403C15.342 82.3457 46.827 70.2982 75.2787 92.4649C86.0343 100.178 115.988 110.122 149.759 88.1962C160.79 80.8835 190.208 70.9023 219.628 89.4793C231.865 98.3467 266.586 110.633 307.569 88.8397C320.492 80.8102 353.686 69.8462 383.072 90.2263C393.793 99.8174 420.727 114.591 442.695 96.9578" stroke="#171616" stroke-width="7.82305"/>
-                    </svg>
-                    <h2 class="title-text">User Personas</h2>
+                <div id="lewis" data-persona-content>
+                    <picture>
+                        <source srcset="assets/images/Caleb Lewis - Desktop.png" media="(min-width: 75em)">
+                        <source srcset="assets/images/Caleb Lewis - Tablet.png" media="(min-width: 40em)">
+                        <img src="assets/images/Caleb Lewis - Desktop.png" alt="Persona of Caleb Lewis." 
+                           loading="lazy" decoding="async">
+                    </picture>
                 </div>
-            </div>
-            <!-- Carousel -->
-        <picture>
-            <source srcset="assets/images/Thuy Pham - Desktop.png" media="(min-width: 75em)">
-            <source srcset="assets/images/Thuy Pham - Tablet.png" media="(min-width: 40em)">
-            <img src="assets/images/Thuy Pham - Desktop.png" alt="A description of the image." 
-               loading="lazy" decoding="async">
-          </picture>
-        </section>
-        <section class="content-section">
-            <div class="grid-2-col">
-                <div class="names">
-                    <ul>
-                        <li><a href="#slide-1">Thuy Pham</a></li>
-                        <li><a href="#slide-2">Caleb Lewis</a></li>
-                        <li><a href="#slide-3">Michael Lopez</a></li>
-                    </ul>
-                </div>
-                <div class="section-title">
-                    <svg width="443" height="110" viewBox="0 0 443 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.15597 19.0053C15.342 10.2107 46.827 -1.83679 75.2787 20.3298C86.0343 28.0427 115.988 37.9869 149.759 16.0612C160.79 8.74845 190.208 -1.23274 219.628 17.3443C231.865 26.2117 266.586 38.498 307.569 16.7047C320.492 8.6752 353.686 -2.2888 383.072 18.0913C393.793 27.6824 420.727 42.4561 442.695 24.8228" stroke="#171616" stroke-width="7.82305"/>
-                        <path d="M3.15597 55.0728C15.342 46.2782 46.827 34.2307 75.2787 56.3974C86.0343 64.1102 115.988 74.0545 149.759 52.1287C160.79 44.816 190.208 34.8348 219.628 53.4118C231.865 62.2792 266.586 74.5655 307.569 52.7722C320.492 44.7427 353.686 33.7787 383.072 54.1588C393.793 63.7499 420.727 78.5237 442.695 60.8903" stroke="#171616" stroke-width="7.82305"/>
-                        <path d="M3.15597 91.1403C15.342 82.3457 46.827 70.2982 75.2787 92.4649C86.0343 100.178 115.988 110.122 149.759 88.1962C160.79 80.8835 190.208 70.9023 219.628 89.4793C231.865 98.3467 266.586 110.633 307.569 88.8397C320.492 80.8102 353.686 69.8462 383.072 90.2263C393.793 99.8174 420.727 114.591 442.695 96.9578" stroke="#171616" stroke-width="7.82305"/>
-                    </svg>
-                    <h2 class="title-text">User Personas</h2>
+                <div id="lopez" data-persona-content>
+                    <picture>
+                        <source srcset="assets/images/Michael Lopez - Desktop.png" media="(min-width: 75em)">
+                        <source srcset="assets/images/Michael Lopez - Tablet.png" media="(min-width: 40em)">
+                        <img src="assets/images/Michael Lopez - Desktop.png" alt="Persona of Michael Lopez." 
+                           loading="lazy" decoding="async">
+                    </picture>
                 </div>
             </div>
-            <!-- Carousel -->
-        <picture>
-            <source srcset="assets/images/Thuy Pham - Desktop.png" media="(min-width: 75em)">
-            <source srcset="assets/images/Thuy Pham - Tablet.png" media="(min-width: 40em)">
-            <img src="assets/images/Thuy Pham - Desktop.png" alt="A description of the image." 
-               loading="lazy" decoding="async">
-          </picture>
-        </section>
-        <section class="content-section">
-            <div class="grid-2-col">
-                <div class="names">
-                    <ul>
-                        <li><a href="#slide-1">Thuy Pham</a></li>
-                        <li><a href="#slide-2">Caleb Lewis</a></li>
-                        <li><a href="#slide-3">Michael Lopez</a></li>
-                    </ul>
+            <!--
+            END PERSONAS
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            START STYLE TILE
+            -->
+
+            <section class="content-section">
+                <div id="styletile" class="grid-2-col">
+                    <div class="names">
+                        
+                    </div>
+                    <div class="section-title">
+                        <svg width="443" height="110" viewBox="0 0 443 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.15597 19.0053C15.342 10.2107 46.827 -1.83679 75.2787 20.3298C86.0343 28.0427 115.988 37.9869 149.759 16.0612C160.79 8.74845 190.208 -1.23274 219.628 17.3443C231.865 26.2117 266.586 38.498 307.569 16.7047C320.492 8.6752 353.686 -2.2888 383.072 18.0913C393.793 27.6824 420.727 42.4561 442.695 24.8228" stroke="#171616" stroke-width="7.82305"/>
+                            <path d="M3.15597 55.0728C15.342 46.2782 46.827 34.2307 75.2787 56.3974C86.0343 64.1102 115.988 74.0545 149.759 52.1287C160.79 44.816 190.208 34.8348 219.628 53.4118C231.865 62.2792 266.586 74.5655 307.569 52.7722C320.492 44.7427 353.686 33.7787 383.072 54.1588C393.793 63.7499 420.727 78.5237 442.695 60.8903" stroke="#171616" stroke-width="7.82305"/>
+                            <path d="M3.15597 91.1403C15.342 82.3457 46.827 70.2982 75.2787 92.4649C86.0343 100.178 115.988 110.122 149.759 88.1962C160.79 80.8835 190.208 70.9023 219.628 89.4793C231.865 98.3467 266.586 110.633 307.569 88.8397C320.492 80.8102 353.686 69.8462 383.072 90.2263C393.793 99.8174 420.727 114.591 442.695 96.9578" stroke="#171616" stroke-width="7.82305"/>
+                        </svg>
+                        <h2 class="title-text">Style Tile</h2>
+                    </div>
                 </div>
-                <div class="section-title">
-                    <svg width="443" height="110" viewBox="0 0 443 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.15597 19.0053C15.342 10.2107 46.827 -1.83679 75.2787 20.3298C86.0343 28.0427 115.988 37.9869 149.759 16.0612C160.79 8.74845 190.208 -1.23274 219.628 17.3443C231.865 26.2117 266.586 38.498 307.569 16.7047C320.492 8.6752 353.686 -2.2888 383.072 18.0913C393.793 27.6824 420.727 42.4561 442.695 24.8228" stroke="#171616" stroke-width="7.82305"/>
-                        <path d="M3.15597 55.0728C15.342 46.2782 46.827 34.2307 75.2787 56.3974C86.0343 64.1102 115.988 74.0545 149.759 52.1287C160.79 44.816 190.208 34.8348 219.628 53.4118C231.865 62.2792 266.586 74.5655 307.569 52.7722C320.492 44.7427 353.686 33.7787 383.072 54.1588C393.793 63.7499 420.727 78.5237 442.695 60.8903" stroke="#171616" stroke-width="7.82305"/>
-                        <path d="M3.15597 91.1403C15.342 82.3457 46.827 70.2982 75.2787 92.4649C86.0343 100.178 115.988 110.122 149.759 88.1962C160.79 80.8835 190.208 70.9023 219.628 89.4793C231.865 98.3467 266.586 110.633 307.569 88.8397C320.492 80.8102 353.686 69.8462 383.072 90.2263C393.793 99.8174 420.727 114.591 442.695 96.9578" stroke="#171616" stroke-width="7.82305"/>
-                    </svg>
-                    <h2 class="title-text">User Personas</h2>
+                <!-- Carousel -->
+            <picture>
+                <source srcset="assets/images/Styles - Desktop.png" media="(min-width: 75em)">
+                <source srcset="assets/images/Styles - Tablet.png" media="(min-width: 40em)">
+                <img src="assets/images/Styles - Desktop.png" alt="Stylesheet for app." 
+                   loading="lazy" decoding="async">
+              </picture>
+            </section>
+            <!--
+            END STYLE TILE
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            START CRITICAL MAP
+            -->
+            <section class="content-section">
+                <div id="criticalmap" class="grid-2-col">
+                    <div class="names">
+                        
+                    </div>
+                    <div class="section-title">
+                        <svg width="443" height="110" viewBox="0 0 443 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.15597 19.0053C15.342 10.2107 46.827 -1.83679 75.2787 20.3298C86.0343 28.0427 115.988 37.9869 149.759 16.0612C160.79 8.74845 190.208 -1.23274 219.628 17.3443C231.865 26.2117 266.586 38.498 307.569 16.7047C320.492 8.6752 353.686 -2.2888 383.072 18.0913C393.793 27.6824 420.727 42.4561 442.695 24.8228" stroke="#171616" stroke-width="7.82305"/>
+                            <path d="M3.15597 55.0728C15.342 46.2782 46.827 34.2307 75.2787 56.3974C86.0343 64.1102 115.988 74.0545 149.759 52.1287C160.79 44.816 190.208 34.8348 219.628 53.4118C231.865 62.2792 266.586 74.5655 307.569 52.7722C320.492 44.7427 353.686 33.7787 383.072 54.1588C393.793 63.7499 420.727 78.5237 442.695 60.8903" stroke="#171616" stroke-width="7.82305"/>
+                            <path d="M3.15597 91.1403C15.342 82.3457 46.827 70.2982 75.2787 92.4649C86.0343 100.178 115.988 110.122 149.759 88.1962C160.79 80.8835 190.208 70.9023 219.628 89.4793C231.865 98.3467 266.586 110.633 307.569 88.8397C320.492 80.8102 353.686 69.8462 383.072 90.2263C393.793 99.8174 420.727 114.591 442.695 96.9578" stroke="#171616" stroke-width="7.82305"/>
+                        </svg>
+                        <h2 class="title-text">Critical Map</h2>
+                    </div>
                 </div>
-            </div>
-            <!-- Carousel -->
-        <picture>
-            <source srcset="assets/images/Thuy Pham - Desktop.png" media="(min-width: 75em)">
-            <source srcset="assets/images/Thuy Pham - Tablet.png" media="(min-width: 40em)">
-            <img src="assets/images/Thuy Pham - Desktop.png" alt="A description of the image." 
-               loading="lazy" decoding="async">
-          </picture>
-        </section>
+                <!-- Carousel -->
+            <picture>
+                <source srcset="assets/images/Critical Path - Desktop.png" media="(min-width: 75em)">
+                <img src="assets/images/Critical Path - Desktop.png" alt="Flowchart of critical user path." 
+                   loading="lazy" decoding="async">
+              </picture>
+            </section>
+            <!--
+            END CRITICAL MAP
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            OTHER CONTENT
+            START MOOD BOARD
+            -->
+            <section class="content-section">
+                <div id="moodboard" class="grid-2-col">
+                    <div class="names">
+                        
+                    </div>
+                    <div class="section-title">
+                        <svg width="443" height="110" viewBox="0 0 443 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.15597 19.0053C15.342 10.2107 46.827 -1.83679 75.2787 20.3298C86.0343 28.0427 115.988 37.9869 149.759 16.0612C160.79 8.74845 190.208 -1.23274 219.628 17.3443C231.865 26.2117 266.586 38.498 307.569 16.7047C320.492 8.6752 353.686 -2.2888 383.072 18.0913C393.793 27.6824 420.727 42.4561 442.695 24.8228" stroke="#171616" stroke-width="7.82305"/>
+                            <path d="M3.15597 55.0728C15.342 46.2782 46.827 34.2307 75.2787 56.3974C86.0343 64.1102 115.988 74.0545 149.759 52.1287C160.79 44.816 190.208 34.8348 219.628 53.4118C231.865 62.2792 266.586 74.5655 307.569 52.7722C320.492 44.7427 353.686 33.7787 383.072 54.1588C393.793 63.7499 420.727 78.5237 442.695 60.8903" stroke="#171616" stroke-width="7.82305"/>
+                            <path d="M3.15597 91.1403C15.342 82.3457 46.827 70.2982 75.2787 92.4649C86.0343 100.178 115.988 110.122 149.759 88.1962C160.79 80.8835 190.208 70.9023 219.628 89.4793C231.865 98.3467 266.586 110.633 307.569 88.8397C320.492 80.8102 353.686 69.8462 383.072 90.2263C393.793 99.8174 420.727 114.591 442.695 96.9578" stroke="#171616" stroke-width="7.82305"/>
+                        </svg>
+                        <h2 class="title-text">Mood Board</h2>
+                    </div>
+                </div>
+                <!-- Carousel -->
+            <picture>
+                <source srcset="assets/images/Mood Board - Desktop.png" media="(min-width: 75em)">
+                <img src="assets/images/Mood Board - Desktop.png" alt="Mood board used to influence design." 
+                   loading="lazy" decoding="async">
+              </picture>
+            </section>
     </div>
 </body>
 </html>
