@@ -1,8 +1,8 @@
 # idm216-OnTheGrid-Kami
 Collaborative repo for idm216 UX design II
 
-* LIVE: [~link~](https://github.com/danelegassick/idm216-OnTheGrid-Kami/tree/main)
-* DEV: [~link~](https://github.com/danelegassick/idm216-OnTheGrid-Kami/tree/dev)
+* LIVE: [Click Here](https://github.com/danelegassick/idm216-OnTheGrid-Kami/tree/main)
+* DEV: [Click Here](https://github.com/danelegassick/idm216-OnTheGrid-Kami/tree/dev)
 
 ## Gitignore
 
