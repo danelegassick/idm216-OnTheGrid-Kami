@@ -1,4 +1,6 @@
+<div>
 <h1>Sides</h1>
+<hr class="red-line">
 
 <?php
 if (!isset($sides)) {
@@ -8,7 +10,8 @@ if (!isset($sides)) {
     // Cant combine functions with string so we have to assign the function to a variable here.
     $site_url = site_url();
     while ($side = mysqli_fetch_array($sides)) {
-        echo "          
+        echo "
+            <div>          
               <img src='{$site_url}{$side['image']}' class='table-img'>
               <div class='recipe-block-text'>
                 
@@ -18,6 +21,8 @@ if (!isset($sides)) {
                 <p>{$side['description']}</p>
                 <p>{$side['ingredients']}</p>
               </div>
-          <hr>";
+              <hr>
+            </div>";
     }
 ?>
+</div>

@@ -1,4 +1,6 @@
+<div>
 <h1>Meals</h1>
+<hr class="red-line">
 
 <?php
 if (!isset($meals)) {
@@ -19,7 +21,8 @@ if (!isset($meals)) {
                 <p>{$meal['description']}</p>
                 <p>{$meal['ingredients']}</p>
               </div>
-            </div>
-          <hr>";
+              <hr>
+            </div>";
     }
 ?>
+</div>
