@@ -77,6 +77,7 @@ a {
 .align-center {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 /* For all CTA buttons */
@@ -108,7 +109,7 @@ a {
     width: 100%;
     height: 100px;
     z-index: 10;
-    border-top: var(--line-color) 1px solid;
+    border-top: var(--line-color) 2px solid;
 
 }
 
@@ -125,7 +126,7 @@ a {
     justify-content: space-between;
     align-items: center;
     flex-direction: row nowrap;
-    margin: 20px 0;
+    margin: 20px 0 0;
 }
 
 .cart-order-text {
@@ -137,6 +138,7 @@ a {
 .cart-order-item {
     display: flex;
     gap: 30px;
+    margin: 20px 0 10px;
 }
 
 
@@ -145,7 +147,7 @@ a {
     margin: 0 auto;
     width: 100%;
     padding: 5px 10px;
-    margin: 20px 0;
+    margin-bottom: 20px;
     box-sizing: border-box;
 }
 
@@ -153,7 +155,7 @@ a {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid var(--line-color);
+    border-top: 2px solid var(--line-color);
     margin: 1em 0;
     padding: 0;
 }
@@ -162,22 +164,35 @@ a {
     margin: 10px 0 ;
 }
 
+.text-line--top {
+    margin-top: -2px;
+}
+
+
 .wait-time-text {
     position: absolute;
     margin: auto;
-    left: 70px;
-    top: 80px;
+    left: 75px;
+    top: 90px;
 
 }
 
 .wait-time-penguin{
-    width: 90%;
+    width: 100%;
+    position: relative;
+    top: 20px;
+    margin-bottom: -12px;
+    margin-left: 50px;
+
 }
 
 .utensil-btn {
     background-color: var(--white);
     border-radius: 10px;
     padding: 10px 5px;
+    height: 120px;
+    width: 90px;
+    margin: 0 ;
     
 }
 
@@ -189,7 +204,18 @@ a {
     margin: 20px 0;
 }
 
+.utensil-img-resize{
+    height: 60%;
+}
+
+.icon-img-resize {
+    width: 10%;
+}
+
 /* space at the bottom to scroll */
-.space {
+.bottom-space {
     height: 100px;
+}
+.top-space {
+    height: 10px;
 }
