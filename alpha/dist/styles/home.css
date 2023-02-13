@@ -161,6 +161,8 @@ main {
 /* KAMI TODAY */
 .kami-today {
     padding: 2rem 1rem;
+    max-width: 700px;
+    margin: auto;
 }
 
 /* Container holding the image and the text */
@@ -279,5 +281,7 @@ main {
 
 footer {
     padding: 0 1rem;
+    max-width: 700px;
+    margin: auto;
 }
 
