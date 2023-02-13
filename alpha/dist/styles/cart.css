@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Poppins';
 }
 
 :root {
@@ -15,21 +16,48 @@
     --white: #FFFFFF;
 }
 
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("../../../assets/fonts/Poppins/Poppins-Bold.ttf");}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../../../assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../../../assets/fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "MoneyGame";
+    src: url("../../../assets/fonts/MoneyGame/MoneyGameRegular-Yza9o.ttf");
+}
+
 h1 {
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Poppins-SemiBold';
+
 }
 
 h2 {
     font-size: 16px;
+    font-family: 'Poppins-SemiBold';
+
 }
 
 p {
     font-size: 14px;
+    font-family: 'Poppins';
+
 }
 
 .all-caps {
     text-transform: uppercase;
 }
+
+
 
 /* Mobile wrapper */
 .wrapper {

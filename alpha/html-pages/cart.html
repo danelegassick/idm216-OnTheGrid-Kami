@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../dist/styles/cart.css">
+</head>
+<body>
+  
+<div class="">
+
+ <!-- Top header -->
+    <header class="header">
+        <img src="../dist/images/cart-images/back-arrow.png">
+        <h1> Cart </h1>
+        <img src="../dist/images/cart-images/cart.png">
+    </header>
+<!--Wait time-->
+<div class="align-center">
+    <img src="../dist/images/cart-images/wait-time-penguin.png" class="wait-time-penguin"/>
+    <h2 class="wait-time-text">
+        The wait time is <span style="color:var(--accent-green)">13 mins</span>!
+    </h2>
+</div>
+<h2 class="all-caps"> Your Order </h2>
+<!-- LINE -->
+<span class="line text-line"></span>
+
+<!--Order items-->
+    <div>
+        <!-- Order information -->
+        <div class="cart-order-item">
+            <div class="cart-order-img">
+                <img src="../dist/images/cart-images/bibimbap_quantity-1.png">
+            </div>
+            <div class="cart-order-text">
+                <div>
+                    <h2>Bibimbap</h2>
+                    <p> Beef (+$1)</p>
+                    <p> Medium Spice</p>
+                </div>
+                <div>
+                    <h2> $9 </h2>
+                </div>
+            </div>
+        </div>
+        <!-- Note input -->
+        <div>
+            <input type="text" placeholder="Add note here" class="note">
+        </div>
+        <!--Edit/delete-->
+        <div class="edit-delete">
+            <a href=""> Delete </a>
+            <a href=""> Edit Item </a>
+        </div>
+
+    </div>
+    
+    <!-- LINE -->
+    <span class="line"></span>
+    
+    <div class="align-center">
+        <h2> You will earn 9 tokens with this order! </h2>
+    </div>
+
+    <!-- LINE -->
+    <span class="line"></span>
+
+    <div class="align-center">
+        <h2>
+            Want to include any utensils?
+        </h2>
+    </div>
+        <div class="all-utensils">
+            <button class="utensil-btn">
+                <img src="../dist/images/cart-images/chopsticks.png">
+                <p>Chopsticks</p>
+            </button>
+            <button class="utensil-btn">
+                <img src="../dist/images/cart-images/fork.png">
+                <p>Forks</p>
+            </button>
+            <button class="utensil-btn">
+                <img src="../dist/images/cart-images/napkin.png">
+                <p>Napkins</p>
+            </button>
+        </div>
+
+    <!-- CTA Button -->
+    <div class="align-center">
+        <a href="" class="button longbtn"> 
+            <p>Sign in to checkout</p>
+            <p> $9 </p>
+        </a> 
+    </div>
+
+</div>
+</body>
+<script src="scripts/main.js"></script>
+
+</html>
