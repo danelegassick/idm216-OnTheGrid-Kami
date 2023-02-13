@@ -57,10 +57,11 @@ h3 {
 }
 
 p {
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
 }
 
-.wrapper {
+.wrapper-top {
     margin-left: auto;
     margin-right: auto; 
     max-width: 85%;
@@ -71,7 +72,7 @@ p {
     justify-content: space-between;
     align-items: center;
     flex-direction: row nowrap;
-    margin: 20px 0;
+    margin: 30px 0 20px 0;
 }
 
 .align-center {
@@ -98,12 +99,63 @@ p {
 .big-check{
     display: flex;
     justify-content: center;
-    margin: 30px auto 30px auto;
+    margin: 30px auto 50px auto;
 }
 
 hr{
     min-width: 40px;
     height: 2px;
     border-top: 2px solid var(--inactive);
-    margin: 50px 30px 20px 30px;
+    margin: 20px 30px;
+}
+
+.tokens-earned{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.token{
+    margin-right: 20px;
+}
+
+.wrapper-bottom{
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 85%;
+}
+
+.order-item{
+    display: flex;
+    justify-content: space-around;
+}
+
+.food-name{
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 18px;
+}
+
+.note{
+    margin: 20px 0 100px 40px;
+}
+
+/* For all CTA buttons */
+.button {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--button-color);
+    padding: 12px 24px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    color: #ffffff;
+
+    position: fixed;
+    bottom: 0;
+}
+
+/* For CTA buttons with full length */
+.longbtn {
+    width: 250px;
 }
