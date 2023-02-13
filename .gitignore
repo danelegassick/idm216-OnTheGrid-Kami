@@ -1,11 +1,65 @@
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.sass-cache
 
-*.DS_Store
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
 
-error_log
-a/videos/
-pieces/config/db.php /* Contact admin for this file */
+# Logs and databases #
+######################
+*.log
+*.sqlite
+*.env.php
+*.env.local.php
+*.env.production.php
 
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Media #
+############
+*.mov
+*.mp3
+*.mp4
+*.ogg
+*.ogv
+*.webm
+
+# Custom #
+######################
+*.gif
+/assignments
+contacts.md
+examples/**/*.jpg
+examples/**/*.png
+examples/05-css/fonts
+examples/06-box_model/02/fonts
+examples/06-box_model/02/images
+examples/week8/media
+graphics
+node_modules
+presentations/images
