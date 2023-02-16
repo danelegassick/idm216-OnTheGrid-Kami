@@ -12,7 +12,6 @@ if (!isset($sides)) {
     while ($side = mysqli_fetch_array($sides)) {
         echo "
             <div>          
-              <img src='{$site_url}{$side['image']}' class='table-img'>
               <div class='recipe-block-text'>
                 
                 <h2>{$side['item-name']}</h2>

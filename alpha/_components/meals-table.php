@@ -12,7 +12,6 @@ if (!isset($meals)) {
     while ($meal = mysqli_fetch_array($meals)) {
         echo "     
             <div>     
-              <img src='{$site_url}{$meal['image']}' class='table-img'>
               <div class='recipe-block-text'>
                 
                 <h2>{$meal['item-name']}</h2>
