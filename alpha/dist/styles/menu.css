@@ -46,6 +46,11 @@ hr {
     margin: 0.25rem auto 1rem;
 }
 
+a {
+    all: unset;
+    cursor: pointer;
+}
+
 /* HEADER STYLES */
 
 .icon {
