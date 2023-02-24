@@ -16,20 +16,18 @@ function get_users()
  * @param string $first_name
  * @param string $last_name
  * @param string $email
- * @param string $phone
  * @return object - mysqli result
  */
 
-function add_user ($first_name, $last_name, $email, $phone)
+function add_user ($first_name, $last_name, $email, $password)
 {
     global $db_connection;
-    $default_password = 'idm232';
-    $hashed_password = password_hash($default_password, PASSWORD_DEFAULT);
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 
     $query = 'INSERT INTO users';
-    $query .= ' (first_name, last_name, password, email, phone)';
-    $query .= " VALUES ('{$first_name}', '{$last_name}', '{$hashed_password}', '$email', '$phone')";
+    $query .= ' (first_name, last_name, password, email)';
+    $query .= " VALUES ('{$first_name}', '{$last_name}', '{$hashed_password}', '$email')";
     $result = mysqli_query($db_connection, $query);
     return $result;
 }
