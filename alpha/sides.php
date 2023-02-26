@@ -25,20 +25,22 @@ $drinks = get_drinks();
             <h4>Tteok bok ki</h4>
             <h4>$8</h4>
         </div>
-    </div>
+        </div>
             <div class="pagination">
                 <span class="pagination-active"></span>
                 <span></span>
                 <span></span>
             </div>
-</div>
+        </div>
         <div class="menu-sections">
-            <h4>Meals<hr class="active-menu"></h4>
-            <h4><a href="<?php echo site_url() . '/sides.php';?>">Sides</a><hr></h4>
+            <h4><a href="<?php echo site_url() . '/index.php';?>">Meals</a><hr></h4>
+            <h4>Sides<hr class="active-menu"></h4>
             <h4><a href="<?php echo site_url() . '/drinks.php';?>">Drinks</a><hr></h4>
         </div>
         <div class="food-section">
-            <?php include_once __DIR__ . '/_components/meals-menu.php'; ?>
+        
+        <?php include_once __DIR__ . '/_components/sides-menu.php'; ?>
+
         </div>
 </div>
 

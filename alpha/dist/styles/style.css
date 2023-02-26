@@ -58,7 +58,15 @@ body {
 main {
     max-width: 1200px;
     margin: auto;
-    /* padding: 1rem; */
+    overflow-x: hidden ;
+    padding: 5rem 0 0;
+}
+
+header {
+  position: fixed;
+  background-color: var(--background-beige);
+  z-index: 2;
+  width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -106,6 +114,11 @@ hr {
     margin: 1rem auto;
 }
 
+ .nav-logo {
+  font-family: 'MoneyGame', sans-serif;
+  line-height: 0;
+}
+
 .grid-3-col {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -116,6 +129,9 @@ hr {
     .grid-3-col {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+.hamburger-menu {
+  z-index: 2;
 }
 
 #menu__toggle {
@@ -212,7 +228,6 @@ hr {
   }
 
   .menu__box {
-    z-index: 1;
     display: block;
     position: fixed;
     top: 0;
@@ -224,6 +239,7 @@ hr {
     background-color: var(--background-darker);
     transition-duration: .25s;
     overflow: hidden;
+    z-index: 2;
   }
 
   .menu__box ul {
@@ -261,6 +277,7 @@ hr {
     font-weight: 600;
     text-decoration: underline;
     transition-duration: .25s;
+    text-align: left;
   }
 
   .menu__item:hover {
@@ -348,9 +365,10 @@ hr {
 /* Modal */
 
 .modal {
-    background-color: #d9d9d9;
+    background-color: var(--background-beige);
     z-index: 2;
-    border-radius: 2rem 2rem 0 0;
+    /* border-radius: 2rem 2rem 0 0; */
+    /* overflow: hidden; */
 }
 
 .food-detail-text {
@@ -364,17 +382,28 @@ hr {
 
 .modal .x-out {
     position: relative;
-    top: 10px;
-    left: calc(100% - 25px);
-    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: calc(100% - 60px);
+    background-color: var(--background-beige);
+    height: 44px;
+    width: 44px;
+    border-radius: 100%;
+}
+
+.x-out a, .x-out img {
+  width: 30px;
+  height: 30px;
 }
 
 .food-detail-hero {
     display: block;
-    border-radius: 100%;
-    border: solid 2px #000000;
-    width: fit-content;
-    max-width: 300px;
+    border-radius: 27px 27px 0 0;
+    width: 100%;
+    object-fit: cover;
+    height: 330px;
     margin: auto;
 }
 
@@ -385,7 +414,7 @@ hr {
 }
 
 .protein-grid div{
-    background-color: white;
+    background-color: var(--background-darker);
     border-radius: 10px;
 }
 
@@ -411,16 +440,17 @@ hr {
 
 #ck-button {
     margin: 4px;
-    background-color:#FFFFFF;
+    background-color: var(--background-beige);
     border-radius: 20px;
     border: 2px solid #000000;
     overflow: auto;
     float: left;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #ck-button:hover {
-    background: #919191;
-    color: white;
+    background: var(--background-darker);
+    color: black;
 }
 
 #ck-button label {
@@ -446,7 +476,7 @@ hr {
 
 .protein-grid #ck-button {
     margin: 0;
-    background-color:#FFFFFF;
+    background-color: var(--background-beige);
     border: 2px solid #000000;
     border-radius: 20px;
     overflow: auto;
@@ -454,11 +484,11 @@ hr {
 }
 
 .protein-grid #ck-button input:checked + span {
-    background-color: var(--background-beige);
+    background-color: var(--background-darker);
 }
 
 .protein-grid #ck-button input:checked {
-    background-color: var(--background-beige);
+    background-color: var(--background-darker);
     border: 2px solid #000000;
 }
 
@@ -475,13 +505,18 @@ hr {
 }
 
 .modal .add-to-cart {
-    background-color: white;
-    position: sticky;
+    background-color: var(--background-beige);
+    position: static;
+    z-index: 0;
     bottom: 0;
     height: 100px;
-    border-top: #A6A6A6 2px solid;
+    border-top: var(--inactive) 2px solid;
     display: flex;
     padding: 0 1rem;
+}
+
+.add-to-cart .btn-dark {
+  z-index: 0;
 }
 
 .slidecontainer {
@@ -489,7 +524,7 @@ hr {
   }
   
   .slider {
-    appearance:none;
+    appearance: none;
     width: 180px;
     height: 30px;
     border-radius: 2rem;  
@@ -517,8 +552,8 @@ hr {
     background: linear-gradient(to right, #FE9181 0%, #FE9181 50%, #FE9181 100%);  }
   
   .mild::-webkit-slider-thumb {
-    /* background: green; */
-    background-image: url("../images/mild-flame-slider.svg");
+    background: green;
+    /* background-image: url("../images/mild-flame-slider.svg"); */
     transform: rotate(90deg);
     border: none;
   }
@@ -594,21 +629,35 @@ hr {
   input[type="range"] {
      position: relative;
      top: 40%;
+     right: 40px;
      transform: rotate(270deg);
   }
 
   .flame-grid {
     padding: 2rem 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 600px;
+    gap: 1rem;
+    grid-template-columns: auto auto 100px;
   }
 
   .flame-label {
     text-align: right;
   }
 
+  .flame-label {
+    line-height: 3.25rem;
+  }
 
+  .flame-image-div {
+    display: flex;
+    text-align: right;
+    justify-content: center;
+  }
 
+  .flame-image-div img{
+    max-width: 100%;
+  }
 
 /* ~~~~~~~~Checkout and Orders~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -929,7 +978,7 @@ hr {
     margin: 1rem auto;
     max-height: 3.5rem;
     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
+    position: static;
     text-decoration: none;
     transition: all 250ms;
     user-select: none;
@@ -938,6 +987,7 @@ hr {
     vertical-align: baseline;
     width: 100%;
     max-width: 450px;
+    z-index: 0;
   }
   
   .btn-dark:hover,
@@ -1027,16 +1077,24 @@ hr {
 
 .button {
   text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font: "Poppins-SemiBold", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  text-align: center;
   background-color: var(--button-color);
-  padding: 12px 24px;
+  padding: 16px 24px;
   margin-bottom: 50px;
   border-radius: 50px;
+  border: none;
   color: #ffffff;
-  position: fixed;
-  bottom: 0;
+}
+
+.width-300 {
+  width: 300px;
+  /* width: 100%; */
 }
 
 
@@ -1069,6 +1127,21 @@ nav {
   padding: 1rem;
 }
 
+.nav-cart {
+  margin-left: auto;
+  height: 44px;
+  width: 44px;
+}
+
+.nav-cart img{
+  display: flex;
+  align-self: center;
+  height: 44px;
+  width: 44px;
+}
+
+
+
 .cart {
   margin-left: auto;
 }
@@ -1085,13 +1158,14 @@ nav {
 }
 
 .kami-today {
-  position: relative;
+  /* position: relative; */
   margin-top: -35px;
 }
 
 /* Container holding the image and the text */
 .todays-pick {
   position: relative;
+  z-index: -10;
   text-align: center;
   color: black;
   border-radius: 1rem;
@@ -1183,6 +1257,7 @@ nav {
 
 .food-card {
   position: relative;
+  z-index: -1;
   color: black;
   border-radius: 1rem;
   overflow: hidden;
@@ -1223,13 +1298,15 @@ nav {
 .food-card-desc {
   text-align: left;
   font-size: 0.875rem;
+  padding-bottom: 44px;
 }
 
 .quick-add-btn {
   width: 44px;
   height: 44px;
-  align-self: end;
-}
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;}
 
 .menu {
   padding: 0rem 1rem;
@@ -1245,4 +1322,17 @@ nav {
 .menu a {
   all: unset;
   cursor: pointer;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+
+.hidden {
+  display: none;
+  height: 0;
+  width: 0;
+  opacity: 0;
 }

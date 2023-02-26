@@ -3,17 +3,12 @@
     $main_navigation = [
         [
             'title' => 'Home',
-            'url' => site_url() . '/admin/search/search-general.php',
+            'url' => site_url() . '/index.php',
             'icon' => site_url() . '/dist/images/Home.svg'
         ],
         [
-            'title' => 'Rewards',
-            'url' => site_url() . '/recipes-list.php',
-            'icon' => site_url() . '/dist/images/Rewards.svg'
-        ],
-        [
           'title' => 'Past Orders',
-          'url' => site_url() . "/auth/login.php",
+          'url' => site_url() . "/orders.php",
           'icon' => site_url() . '/dist/images/Orders.svg'
         ],
     ];
@@ -22,7 +17,7 @@
 
 <header>
 <nav>
-  <div class="hamburger-menu">
+  <!-- <div class="hamburger-menu">
                 <input id="menu__toggle" type="checkbox" />
                 <label class="menu__btn" for="menu__toggle">
                     <span></span>
@@ -68,5 +63,9 @@
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav> -->
+
+<?php 
+    include_once __DIR__ . '/nav-variants/home-nav.php'; 
+?>
 </header>
