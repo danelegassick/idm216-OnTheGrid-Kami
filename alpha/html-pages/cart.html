@@ -9,22 +9,26 @@
 </head>
 <body>
   
-<div class="wrapper">
-    <div class="top-space"> </div>
+
+
  <!-- Top header -->
     <header class="header">
-        <img src="../dist/images/cart-images/back-arrow.png" alt="back arrow" class="icon-img-resize"/>
-        <h1> Cart </h1>
-        <img src="../dist/images/cart-images/cart.png" alt="cart icon" class="icon-img-resize">
+        <div class="fixed-header">
+            <img src="../dist/images/cart-images/back-arrow.png" alt="back arrow" class="icon-img-resize" />
+            <h1 class=" cart-title">  Cart </h1>
+        </div>
     </header>
+
+ <div class="top-space"> </div>
 <!--Wait time-->
-<div class="align-center">
-    <img src="../dist/images/cart-images/wait-time-penguin.png" alt="wait time" class="wait-time-penguin"/>
-    <!-- <h2 class="wait-time-text">
-        The wait time is <span style="color:var(--accent-green)">13 mins</span>!
-    </h2> -->
-</div>
-<h2 class="all-caps"> Your Order </h2>
+<div class="wrapper">
+    <div class="align-center">
+        <img src="../dist/images/cart-images/wait-time-penguin.png" alt="wait time" class="wait-time-penguin"/>
+        <!-- <h2 class="wait-time-text">
+            The wait time is <span style="color:var(--accent-green)">13 mins</span>!
+        </h2> -->
+    </div>
+    <h2 class="all-caps"> Your Order </h2>
 </div>
 
 <!-- LINE -->
@@ -36,7 +40,8 @@
         <!-- Order information -->
         <div class="cart-order-item">
             <div class="cart-order-img">
-                <img src="../dist/images/cart-images/bibimbap_quantity-1.png" alt="Bibimbap image, quantity: 1">
+                <img src="../dist/images/cart-images/bibimbap.png" alt="Bibimbap image" class="cart-item-image">
+                <p class="quantity">1</p>
             </div>
             <div class="cart-order-text">
                 <div>
@@ -66,15 +71,6 @@
 
 <div class="wrapper">
     <div class="align-center">
-        <h2> You will earn 9 tokens with this order! </h2>
-    </div>
-</div>
-
-    <!-- LINE -->
-    <span class="line"></span>
-
-<div class="wrapper">
-    <div class="align-center">
         <h2>
             Want to include any utensils?
         </h2>
@@ -98,7 +94,7 @@
     <!-- CTA Button -->
     <div class="align-center">
         <a href="" class="button longbtn"> 
-            <p>Sign in to checkout</p>
+            <p>Log in to checkout</p>
             <p> $9 </p>
         </a> 
     </div>
@@ -107,8 +103,6 @@
     </div>
 <div class="bottom-space"> </div>
 
-<a href="signin.html">Next Page</a>
-<a href="index.html">Previous Page</a>
 
 </body>
 <footer>

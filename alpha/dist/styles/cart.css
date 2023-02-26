@@ -36,6 +36,10 @@
     src: url("../../../assets/fonts/MoneyGame/MoneyGameRegular-Yza9o.ttf");
 }
 
+body {
+    background-color: var(--background-beige);
+}
+
 h1 {
     font-size: 18px;
     font-family: 'Poppins-SemiBold';
@@ -103,7 +107,7 @@ a {
 }
 
 .button-background {
-    background-color: var(--white);
+    background-color: var(--background-beige);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -121,13 +125,46 @@ a {
     margin-bottom: 20px;
 }
 
-.header {
+.fixed-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row nowrap;
-    margin: 20px 0 0;
+    padding: 20px;
+
+    position: fixed;
+    background-color: var(--background-beige);
+    width: 50%;
+
+    z-index: 100;
 }
+
+.header {
+    background-color: var(--background-beige);
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 50;
+}
+
+.icon-img-resize {
+    width: 30px;
+}
+.cart-icon {
+    opacity: 0;
+}
+
+/* .cart-title {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.back-icon {
+    position: fixed;
+    top: 29px;
+    width: 30px;
+} */
 
 .cart-order-text {
     display: flex;
@@ -139,6 +176,21 @@ a {
     display: flex;
     gap: 30px;
     margin: 20px 0 10px;
+    position: relative;
+}
+
+/* cart item image size */
+.cart-item-image {
+    width: 77px;
+}
+
+/* quantity number  */
+.quantity {
+    position: absolute;
+    top: 58px;
+    left: 12px;
+    color: var(--white);
+    font-weight: bold;
 }
 
 
@@ -149,6 +201,9 @@ a {
     padding: 5px 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
+    background-color: var(--background-beige);
+    border: 1.6px solid var(--line-color);
+    border-radius: 4.3px;
 }
 
 .line {
@@ -187,7 +242,8 @@ a {
 }
 
 .utensil-btn {
-    background-color: var(--white);
+    background-color: var(--background-beige);
+    border: 1.6px solid var(--primary);
     border-radius: 10px;
     padding: 10px 5px;
     height: 120px;
@@ -196,6 +252,9 @@ a {
     
 }
 
+.utensil-btn:hover {
+    cursor: pointer;
+}
 
 
 .all-utensils {
@@ -208,14 +267,12 @@ a {
     height: 60%;
 }
 
-.icon-img-resize {
-    width: 10%;
-}
+
 
 /* space at the bottom to scroll */
 .bottom-space {
     height: 100px;
 }
 .top-space {
-    height: 10px;
+    height: 60px;
 }
