@@ -664,21 +664,30 @@ hr {
 .top-title {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
     align-content: center;
     align-items: center;
     text-align: center;
-    margin: auto;
-    padding: 1rem;
+    padding: 1rem 0;
+    z-index: 20;
 }
 
 .back-arrow {
     max-width: 44px;
 }
 
+.page-hamburger {
+    padding-left: 1rem;
+}
+
 .page-title {
     font-size: 1.125rem;
     margin: 0;
+}
+
+.page-cart {
+    position: absolute;
+    right: 0;
+    padding-right: 1rem;
 }
 
 .pickup-line {
@@ -697,7 +706,7 @@ hr {
 }
 
 .pickup-select {
-    background-color: var(--button-color);
+    background-color: var(--accent-green);
     border: none;
     color: var(--background-beige);
     text-align: center;
@@ -723,16 +732,6 @@ hr {
     margin-right: 0.5rem;
 }
 
-.order-rewards {
-    display: flex;
-    align-items: center;
-}
-
-.order-rewards img {
-    width: 1.188rem;
-    height: 1.188rem;
-}
-
 .order-totals-hr {
     margin: 0;
     height: 1px;
@@ -751,7 +750,12 @@ hr {
 .order-line-item {
     display: flex;
     justify-content: space-between;
-    margin: 0.5rem 0;
+    margin: 1.5rem 0;
+    align-items: center;
+}
+
+.order-line-item > p {
+    margin: 0;
 }
 
 .order-line-item:last-of-type {
@@ -763,21 +767,32 @@ hr {
     font-size: 1.25rem;
 }
 
+
 .tip-option {
     height: 2.5rem;
     margin: auto 0;
     aspect-ratio: 1;
-    border: var(--button-color) solid 1px;
+    border: var(--accent-green) solid 1px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 1.25rem;
     font-size: 0.75rem;
+    color: var(--accent-green);
 }
 
 .selected-tip {
-    background-color: var(--button-color);
-    color: var(--white);
+    background-color: var(--accent-green);
+    color: var(--background-beige);
+}
+
+.custom-tip {
+    /* use https://codepen.io/sosuke/pen/Pjoqqp to get filter from hex */
+    filter: invert(52%) sepia(22%) saturate(810%) hue-rotate(112deg) brightness(96%) contrast(93%);
+}
+
+.tip-percent {
+    font-size: 0.5rem;
 }
 
 .select-payment {
@@ -790,23 +805,25 @@ hr {
     margin: 0.75rem 0;
 }
 
-.currentcard {
+.current-credit {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--line-color);
     margin: 1.5rem 0 0 0;
+    border: var(--primary) 2px solid;
     padding: 1rem;
     border-radius: 0.75rem;
 }
 
-.card-details {
+.credit-details {
     text-align: end;
+
 }
 
-.card-details > * {
+.credit-details > * {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 .card-details > p {
@@ -814,18 +831,33 @@ hr {
 }
 
 .external-payment-options {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
 }
 
 .external-payment {
-    background-color: var(--line-color);
-    margin: 0.75rem 0 0 0;
-    padding: 1rem;
-    border-radius: 0.75rem;
+    background-color: var(--background-beige);
+    margin: 0.75rem 0;
+    padding: 0 0.5rem 0 0;
+    border-radius: 0.55rem;
+    border: var(--primary) solid 2px;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.payment-method-text {
+    text-align: center;
+}
+
+.back-button {
+    display: inline;
 }
 
 .orders-line {
+    margin-left: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -847,10 +879,10 @@ hr {
 
 .in-progress-header {
     background-color: var(--primary);
-    color: var(--white);
+    color: var(--background-beige);
     text-align: center;
     padding: 0.5rem 0;
-    margin-top:  1.5rem;
+    margin:  1.5rem 0.5rem 0 0.5rem;
     border-radius: 20px 20px 0 0;
 }
 
@@ -859,6 +891,7 @@ hr {
     border-radius: 0 0 20px 20px;
     display: flex;
     flex-direction: column;
+    margin: 0 0.5rem;
     padding: 1rem;
 }
 
@@ -866,6 +899,23 @@ hr {
     right: 10px;
     align-self: flex-end;
     margin: 0;
+}
+
+.current-order-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0.5rem 0;
+}
+
+.order-name {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.order-foods {
+    font-size: 1rem;
+        margin: 0;
 }
 
 .order-tracker {
@@ -910,6 +960,7 @@ hr {
     margin: 0.5rem auto 0 auto;
     border: var(--primary) solid 2px;
     border-radius: 1.5rem;
+    background-color: var(--background-beige);
 }
 
 .arrived-btn h2 {
@@ -958,6 +1009,29 @@ hr {
     text-align: center;
     margin: 4rem auto;
 }
+
+.orders-not-signed-in {
+    margin: 5rem 3rem;
+}
+
+.greyscale-cook {
+    filter: grayscale(100%);
+    opacity: 50%;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.sign-up-cta {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 2rem 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   .btn-dark {
@@ -1010,7 +1084,7 @@ hr {
   }
 
   .checkout-main {
-    padding: 0 1rem;
+    padding: 5rem 1rem;
   }
 
 /* SIGNIN PAGE */

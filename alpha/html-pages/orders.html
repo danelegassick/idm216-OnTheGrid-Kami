@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orders | KAMI</title>
+    <title>Past Orders | KAMI</title>
     <link rel="stylesheet" href="../dist/styles/style.css">
 </head>
 <body>
     <header class="top-title">
-        <img class="icon" src="../dist/images/hamburger-menu.svg" alt="hamburger-menu">
-        <h1 class="page-title">Orders</h1>
+        <img class="page-hamburger" src="../dist/images/hamburger-menu.svg" alt="hamburger-menu">
+        <h1 class="page-title">Past Orders</h1>
+        <img class="page-cart" src="../dist/images/cart.svg" alt="">
     </header>
     <main>
         <div class="orders-line">
@@ -24,6 +25,10 @@
             </div>
             <div class="in-progress-body">
                 <p class="order-number">#11223344</p>
+                <div class="current-order-details">
+                    <h1 class="order-name">Jervo's Order</h1>
+                    <p class="order-foods">1 Bibimbap + 2 Kimchi</p>
+                </div>
                 <div class="order-tracker">
                     <img class="order-tracker-image" src="../dist/images/order-tracker.svg" alt="">
                     <div class="order-tracker-text">
@@ -32,13 +37,6 @@
                         <p><b>Ready</b></p>
                     </div>
                 </div>
-                <div class="orders-page-line-item">
-                    <h2>Bibimbap</h2>
-                    <h2>$11</h2>
-                </div>
-                <p class="orders-page-details">Beef (+$1)</p>
-                <p class="orders-page-details">Medium Spice</p>
-                <p class="orders-page-details">Note: Please take out sesame seeds!</p>
                 <button class="arrived-btn">
                     <h2>I have arrived!</h2>
                 </button>
