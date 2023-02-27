@@ -3,15 +3,15 @@
  * This file will hold all the functions for your project.
  */
 
- function get_project_path()
- {
-     global $APP_CONFIG;
-     if ($APP_CONFIG['environment'] === 'development') {
-         return $_SERVER['DOCUMENT_ROOT'] . '/idm216/beta';
-     } else {
-         return $_SERVER['DOCUMENT_ROOT'] . '/beta';
-     }
- }
+function get_project_path()
+{
+    global $APP_CONFIG;
+    if ($APP_CONFIG['environment'] === 'development') {
+        return $_SERVER['DOCUMENT_ROOT'] . '/idm216/beta';
+    } else {
+        return $_SERVER['DOCUMENT_ROOT'] . '/beta';
+    }
+}
 
 /**
  * Get the site URL defined in your .env file
