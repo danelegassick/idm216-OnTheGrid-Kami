@@ -119,6 +119,11 @@ hr {
   line-height: 0;
 }
 
+.nav-logo-poppins {
+  font-family: 'Poppins-Bold', sans-serif;
+  line-height: 0;
+}
+
 .grid-3-col {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -675,6 +680,19 @@ hr {
     max-width: 44px;
 }
 
+.back-icon {
+  margin-right: auto;
+  height: 44px;
+  width: 44px;
+}
+
+.back-icon img{
+  display: flex;
+  align-self: center;
+  height: 44px;
+  width: 44px;
+}
+
 .page-hamburger {
     padding-left: 1rem;
 }
@@ -861,6 +879,7 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: -900;
 }
 
 .orders-line h2 {
@@ -868,9 +887,8 @@ hr {
 }
 
 .orders-image {
-    position: absolute;
+    position: relative;
     right: 24px;
-    z-index: 10;
 }
 
 .in-progress-card {

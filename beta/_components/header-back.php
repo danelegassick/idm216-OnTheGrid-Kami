@@ -25,16 +25,15 @@ $document_title = $page_title . ' | ' . $site_title; // Home | IDM232
 <body>
 
 
-<?php
-
-  if (isset($_SESSION['user'])) {
-    // echo 'Cool Menu Here' . $_SESSION['user']['first_name'];
-    include __DIR__ . '/main-nav-login.php';
-  }
-  else {
-    include __DIR__ . '/main-nav.php'; 
-  }
-?>
+<header>
+<div class="nav-background">
+<nav>
+    <?php 
+    include_once __DIR__ . '/nav-variants/back-nav.php'; 
+    ?>
+</nav>
+</div>
+</header>
 
 <main>
 

@@ -1,6 +1,6 @@
 <?php
 include_once __DIR__ . '/app.php';
-$page_title = 'Home';
+$page_title = 'KAMI';
 include_once __DIR__ . '/_components/header.php';
 $meals = get_meals();
 $sides = get_sides();
@@ -8,7 +8,7 @@ $drinks = get_drinks();
 ?>
 <div class="menu">
 <div class="wait-time">
-    <img class="wait-time-image" src="<?php echo site_url() . '/dist/images/cart-images/wait-time-penguin.png';?>" alt="kami-logo">
+    <img class="wait-time-image" src="<?php echo site_url() . '/dist/images/open-now.svg';?>" alt="kami-logo">
 </div>
 <div class="kami-today">
     <h4>Kami today</h4>
@@ -41,6 +41,12 @@ $drinks = get_drinks();
 
             <?php include_once __DIR__ . '/_components/drinks-menu.php'; ?>
         </div>
+</div>
+
+<div class="footer-index">
+<br>
+<img src="<?php echo site_url(); ?>/dist/images/truck-footer.svg" alt="truck footer">
+    <br>
 </div>
 
 <?php include_once __DIR__ . '/_components/footer.php'; ?>

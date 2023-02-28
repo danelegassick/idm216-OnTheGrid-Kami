@@ -1,6 +1,6 @@
 <?php
 include_once __DIR__ . '/app.php';
-$page_title = 'Home';
+$page_title = 'KAMI';
 include_once __DIR__ . '/_components/header.php';
 $meals = get_meals();
 $sides = get_sides();
@@ -149,7 +149,7 @@ $site_url = site_url();
                 <div class="stepper">
                     <!-- Microinteraction goes here -->
                 </div>
-                <a class="btn-dark" href="<?php echo site_url();?>/html-pages/cart.html">Add to cart $9</a>
+                <a class="btn-dark" href="<?php echo site_url();?>/cart.php">Add to cart $9</a>
             </div>
 
         </div>

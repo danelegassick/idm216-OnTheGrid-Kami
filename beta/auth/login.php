@@ -1,7 +1,9 @@
 <?php
 include_once __DIR__ . '/../app.php';
 $page_title = 'Sign In';
-include_once __DIR__ . '/../_components/header.php';
+include_once __DIR__ . '/../_components/header-back.php';
+
+$previousURL = $_SERVER['HTTP_REFERER'];
 
 ?>
 

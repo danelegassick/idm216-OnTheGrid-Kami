@@ -4,6 +4,7 @@
 if (!isset($page_title)) {
     $page_title = '🚨 Missing Title 🚨';
 }
+
 $site_title = 'IDM 216';
 $document_title = $page_title . ' | ' . $site_title; // Home | IDM232
 

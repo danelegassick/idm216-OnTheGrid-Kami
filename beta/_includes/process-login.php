@@ -5,6 +5,7 @@ if (!$_POST) {
     die('Unauthorized');
 }
 
+global $previousURL;
 // Store $_POST data to variables for readability
 $email = sanitize_value($_POST['email']);
 $password = sanitize_value($_POST['password']);
@@ -18,7 +19,7 @@ if ($user) {
         'first_name' => $user['first_name'],
         'last_name' => $user['last_name'],
     ];
-    redirect_to('/');
+    redirect_to($previousURL);
 } else {
     $error_message = 'User was not updated: ' . mysqli_error($db_connection);
     redirect_to('/auth/login?error=' . $error_message);

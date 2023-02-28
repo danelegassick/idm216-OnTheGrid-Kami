@@ -31,7 +31,7 @@ include_once __DIR__ . '/_components/header.php';
 <!-- CTA button: Sign in & checkout -->
     <div class="align-center">
         <a href="checkout.html" class="button"> 
-            Sign in & checkout
+            Sign in
         </a> 
     </div>
 </div>

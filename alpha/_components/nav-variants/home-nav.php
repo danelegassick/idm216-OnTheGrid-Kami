@@ -44,5 +44,5 @@
         </div>
     </div>
 
-    <div><h1 class="nav-logo">KAMI</h1></div>
+    <div><h1 class="nav-logo"><?php echo $page_title; ?></h1></div>
     <div class="nav-cart"><img src="<?php echo site_url();?>/dist/images/cart.svg" alt="cart-icon"></div>
