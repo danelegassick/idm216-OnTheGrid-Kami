@@ -1,12 +1,8 @@
 <?php
-ob_start()
 include_once __DIR__ . '/app.php';
+ob_start();
 
-function RedirectToURL($url, $waitmsg = 0)
-{
-    header("Refresh:$waitmsg; URL= $url");
-    exit;
-}
+$site_url = site_url();
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +41,8 @@ function RedirectToURL($url, $waitmsg = 0)
 
 <?php 
 // sleep(2);
-RedirectToURL(site_url() . "/order-confirmation.html", 2);
+// RedirectToURL(site_url() . "/order-confirmation.html", 2);
+header("Refresh: 2; URL= $site_url/order-confirmation.php");
+exit;
 ?>
 </html>
