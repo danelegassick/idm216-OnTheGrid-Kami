@@ -1,4 +1,5 @@
 <?php
+ob_start()
 include_once __DIR__ . '/app.php';
 
 function RedirectToURL($url, $waitmsg = 0)
