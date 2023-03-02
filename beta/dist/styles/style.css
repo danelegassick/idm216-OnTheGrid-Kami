@@ -786,6 +786,7 @@ hr {
     border-radius: 1.25rem;
     font-size: 0.75rem;
     color: var(--accent-green);
+    cursor: pointer;
 }
 
 .selected-tip {
@@ -820,6 +821,7 @@ hr {
     border: var(--primary) 2px solid;
     padding: 1rem;
     border-radius: 0.75rem;
+    cursor: pointer;
 }
 
 .credit-details {
@@ -853,6 +855,7 @@ hr {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
 }
 
 .payment-method-text {
