@@ -5,6 +5,9 @@ include_once __DIR__ . '/_components/header.php';
 $meals = get_meals();
 $sides = get_sides();
 $drinks = get_drinks();
+$restrictions = get_restrictions();
+$spices = get_spices();
+$proteins = get_proteins();
 ?>
 
 <?php
@@ -34,6 +37,7 @@ $site_url = site_url();
                 <img src="<?php echo $site_url . '/dist/images/meals/' . $meal['image'];?>" alt="<?php echo $meal['item-name']?>" class="food-detail-hero">
 
             <div class="food-detail-text">
+            <form action="">
                 <div class="inline">
                     <h1><?php echo $meal['item-name']?></h1>
                     <h1>$<?php echo $meal['price']?></h1>
@@ -60,82 +64,12 @@ $site_url = site_url();
                 </div>
                 <h2>Add protein (+$1)</h2>
                 <div class="protein-grid">
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="1">
-                            <span>
-                                <img src="<?php echo $site_url . '/dist/images/protein-beef.svg';?>" alt="beef">
-                                <p>Beef</p>
-                            </span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="2">
-                            <span>
-                                <img src="<?php echo $site_url . '/dist/images/protein-tofu.svg';?>" alt="Tofu">
-                                <p>Tofu</p>
-                            </span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="3">
-                            <span>
-                                <img src="<?php echo $site_url . '/dist/images/protein-chicken.svg';?>" alt="Chicken">
-                                <p>Chicken</p>
-                            </span>
-                        </label>
-                    </div>
+                    <?php include_once __DIR__ . '/_components/food-details/protein.php'; ?>
                 </div>
                 <br>
                 <h2>Select Dietary Needs</h2>
                 <div class="checkbox-container">
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="1"><span>Lactose Free</span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="2"><span>Vegetarian</span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="3"><span>Dairy Free</span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="4"><span>Gluten Free</span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="5"><span>Peanut Free</span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="6"><span>Kosher</span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="7"><span>Vegan</span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="8"><span>Halal</span>
-                        </label>
-                    </div>
-                    <div id="ck-button">
-                        <label>
-                            <input type="checkbox" value="9"><span>Soy Free</span>
-                        </label>
-                    </div>
+                    <?php include_once __DIR__ . '/_components/food-details/diet-restrictions.php'; ?>
                 </div>
                 <br>
                 <h2>Add a note</h2>
@@ -151,6 +85,7 @@ $site_url = site_url();
                 </div>
                 <a class="btn-dark" href="<?php echo site_url();?>/cart.php">Add to cart $9</a>
             </div>
+            </form>
 
         </div>
 
