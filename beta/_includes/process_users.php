@@ -18,7 +18,7 @@ $result = add_user($first_name_value, $last_name_value, $email_value, $password_
 
 // Check there are no errors with our SQL statement
 if ($result) {
-    redirect_to('/admin/users');
+    redirect_to('/checkout.php');
 } else {
     $error_message = 'Sorry there was an error creating the user ' . mysqli_error($db_connection);
     redirect_to('/admin/users?error=' . $error_message);
