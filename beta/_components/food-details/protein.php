@@ -11,7 +11,7 @@
                 <label>
                     <input type='checkbox' value='{$protein['id']}'>
                     <span>
-                        <img src='$site_url/dist/images/protein-{$protein['name']}.svg';' alt='{$protein['name']}'>
+                        <img src='$site_url/dist/images/protein-{$protein['name']}.svg' alt='{$protein['name']}'>
                         <p>{$protein['name']}</p>
                     </span>
                 </label>
