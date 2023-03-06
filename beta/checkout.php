@@ -62,7 +62,7 @@ $drinks = get_drinks();
             <p>+ add new card</p>
             <div class="external-payment-options">
                 <button class="external-payment">
-                    <img class="payment-method-image" src="<?php echo site_url(); ?>/dist/images/venmo.svg" alt="">
+                    <img class="payment-method-image" src="<?php echo site_url(); ?>/dist/images/venmo.svg" alt="venmo">
                     <p class="payment-method-text">Venmo</p>
                 </button>
                 <button class="external-payment">

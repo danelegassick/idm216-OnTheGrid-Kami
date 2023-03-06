@@ -25,7 +25,7 @@ $site_url = site_url();
         empty png with a back icon or whatever is needed -->
         <img src="images/Icons/empty.png">
         <h1>Thank you!</h1>
-        <a href="index.php"><img src="images/Icons/close.png"></a>
+        <a href="menu-order-ready.php"><img src="images/Icons/close.png"></a>
     </header>
 
     <!-- Pickup Time & Order # -->
