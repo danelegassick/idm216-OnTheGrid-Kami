@@ -8,11 +8,7 @@ $drinks = get_drinks();
 ?>
 <div class="menu">
 <div class="wait-time">
-            <!-- **********THIS IS THE THING THAT CHANGED********** -->
-            <a href="<?php echo site_url(); ?>/order-ready.html">
-                <img class="wait-time-image" src="<?php echo site_url(); ?>/dist/images/order-ready.svg" alt="">
-            </a>
-            <!-- ^^^^^^^^^^THIS IS THE THING THAT CHANGED^^^^^^^^^^ -->
+    <img class="wait-time-image" src="<?php echo site_url() . '/dist/images/open-now.svg';?>" alt="kami-logo">
 </div>
 <div class="kami-today">
     <h4>Kami today</h4>

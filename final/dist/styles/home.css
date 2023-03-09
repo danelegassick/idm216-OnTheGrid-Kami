@@ -1,0 +1,283 @@
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("../../../assets/fonts/Poppins/Poppins-Bold.ttf");}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../../../assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../../../assets/fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "MoneyGame";
+    src: url("../../../assets/fonts/MoneyGame/MoneyGameRegular-Yza9o.ttf");
+}
+
+html {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins-SemiBold', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 0.75px solid #000;
+    margin: 0.25rem auto 1rem;
+}
+
+/* HEADER STYLES */
+
+.icon {
+    max-width: 44px;
+}
+
+.icon-small {
+    max-width: 16px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.logo {
+    font-family: 'MoneyGame', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+.cart {
+    margin-left: auto;
+}
+
+.menu {
+    justify-self: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* MAIN STYLES */
+
+main {
+    padding: 4rem 0 1rem;
+}
+
+.intro {
+    margin: auto;
+    max-width: 275px;
+}
+
+.intro * {
+    padding: 0;
+    margin: 0;
+}
+
+.welcome {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.welcome-2 {
+    font-family: 'Poppins-SemiBold', sans-serif;
+    font-size: 30px;
+}
+
+.welcome-3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    color: #979797;
+}
+
+/* CSS */
+.btn-1 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 4px 12px;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Poppins-SemiBold',sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 100%;
+}
+
+.btn-1:hover,
+.btn-1:focus {
+  border-color: rgba(0, 0, 0, 0.65);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.btn-1:hover {
+  transform: translateY(-1px);
+}
+
+.btn-1:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+/* KAMI TODAY */
+.kami-today {
+    padding: 2rem 1rem;
+}
+
+/* Container holding the image and the text */
+.home-card {
+    position: relative;
+    text-align: center;
+    color: black;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 150px;
+  }
+
+.card-img {
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    /* other styles (left, top, right, and padding) */
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.card-content * {
+    width: fit-content;
+    padding: 1rem;
+}
+
+.card-content :nth-child(2) {
+    margin-left: auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* SWIRL STYLES */
+
+.background-swirls {
+    z-index: -1;
+}
+
+.swirl {
+    width: 450px;
+    /* max-width: 100%; */
+    position: absolute;
+    z-index: -999;
+}
+
+.background-swirls :nth-child(1) {
+    top: -200px;
+    right: -200px;
+    transform: rotate(-45deg);
+}
+
+.background-swirls :nth-child(2) {
+    top: 120px;
+    left: -250px;
+    transform: rotate(-180deg);
+}
+
+.background-swirls :nth-child(3) {
+    top: 300px;
+    right: -250px;
+    transform: rotate(0deg);
+}
+
+.background-swirls :nth-child(4) {
+    top: 600px;
+    left: -250px;
+    transform: rotate(-180deg);
+}
+
+.background-swirls :nth-child(5) {
+    top: 700px;
+    right: -200px;
+    transform: rotate(0deg);
+    width: 400px;
+}
+
+.kami-logo {
+    position: absolute;
+    z-index: -1;
+    top: 80px;
+    right: -40px;
+    transform: rotate(-45deg);
+}
+
+/* footer */
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-text p {
+    text-align: center;
+}
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer {
+    padding: 0 1rem;
+}
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/beta.css" />
+    <link rel="stylesheet" type="text/css" href="../dist/styles/alpha.css" />
     <title>Order Confirmation</title>
 </head>
 <body>
@@ -16,9 +16,9 @@
         <!-- this image below is just an empty space so we can 
         reuse this to have consistent headers, just replace the 
         empty png with a back icon or whatever is needed -->
-        <img src="images/Icons/empty.png">
+        <img src="../images/Icons/empty.png">
         <h1>Thank you!</h1>
-        <a href="menu-order-ready.php"><img src="images/Icons/close.png"></a>
+        <a href="index.php"><img src="../images/Icons/close.png"></a>
     </header>
 
     <!-- Pickup Time & Order # -->
@@ -28,7 +28,7 @@
                 PICKUP TIME
             </h2>
             <h3 class="">
-                12:30pm
+                12:30
             </h3>
             <div class="order-number">
                 Order #: 123456
@@ -38,54 +38,53 @@
 
     <!-- Progress Tracker -->
     <div class="">
-        <img src="images/tracker-ready.png" class="tracker">
+        <img src="../images/ProgressTracker.png" class="tracker">
     </div>
 
-    <!-- QR Code -->
-    <div class="QR-code">
-        <img src="images/QR-code.png" class="">
+    <!-- Big Checkmark -->
+    <div class="big-check">
+        <img src="../images/BigCheck.png" class="">
     </div>
 
 </div>
 
-<!-- Instructions Section -->
-<div class="center">
-<div class="instructions">
-    Present the QR code at KAMI to <br> recieve your food!
-</div>
-</div>
-
-<!-- Order Items Section -->
-<div class="order-name">
-   <h2>JERVO'S ORDER</h2> 
-</div>
+<!-- Tokens Earned Section -->
 <hr>
 
+<div class="tokens-earned">
+    <img src="../images/Icons/token.png" class="token">
+    <p>
+        You earned 9 Tokens!
+    </p>
+</div>
+
+<hr>
+
+<!-- Order Items Section -->
 <div class="wrapper-bottom">
 
     <div class="order-item">
-        <img src="images/cart-thumbnail.png" class="thumbnail">
+        <img src="../images/cart-thumbnail.png" class="">
         
-        <div class="text-block">
+        <div class="">
             <div class="food-name">Bibimbap</div>
             <p>Beef ($1)</p>
             <p>Medium Spice</p>
         </div>
         
-        <div class="price food-name">$11</div>
+        <div class="price food-name">$9</div>
     </div>
 
+    <p class="note">Note: Please take out sesame seeds!</p>
 </div>
 
 <!-- Directions to Truck Button -->
 <div class="align-center">
     <a href="" class="button longbtn"> 
         <p>Directions to truck</p>
-        <img src="images/Icons/location.png">
+        <img src="../images/Icons/location.png">
     </a> 
 </div>
-
-<div class="button-background"></div>
 
 <!-- not sure how to make the button background 
 (white section behind to cover overlapping text)

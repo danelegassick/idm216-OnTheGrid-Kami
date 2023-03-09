@@ -1,3 +1,13 @@
+<?php
+include_once __DIR__ . '/app.php';
+
+function RedirectToURL($url, $waitmsg = 0)
+{
+    header("Refresh:$waitmsg; URL= $url");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,4 +42,8 @@
 
 </body>
 
+<?php 
+// sleep(2);
+RedirectToURL(site_url() . "/order-confirmation.html", 2);
+?>
 </html>
