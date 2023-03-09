@@ -9,7 +9,7 @@
         echo "
             <div id='ck-button'>
                 <label for='protein-{$protein['id']}'>
-                    <input type='radio' value='{$protein['id']}' id='protein-{$protein['id']}' name='proteinID'>
+                    <input type='checkbox' value='{$protein['id']}' id='protein-{$protein['id']}' name='proteinID[]'>
                     <span>
                         <img src='$site_url/dist/images/protein-{$protein['name']}.svg';' alt='{$protein['name']}'>
                         <p>{$protein['name']}</p>

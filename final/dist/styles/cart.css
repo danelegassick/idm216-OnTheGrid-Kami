@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+:root {
+    /*COLORS*/
+    --primary: #000000;
+    --button-color: #000000;
+    --kami-red: #EB4E37;
+    --yellow: #F6BF42;
+    --inactive: #A6A6A6;
+    --accent-green: #439980;
+    --background-beige: #FFFAED;
+    --white: #FFFFFF;
+    --line-color: #B7B7B7;
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("../../../assets/fonts/Poppins/Poppins-Bold.ttf");}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../../../assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../../../assets/fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "MoneyGame";
+    src: url("../../../assets/fonts/MoneyGame/MoneyGameRegular-Yza9o.ttf");
+}
+
+body {
+    background-color: var(--background-beige);
+}
+
+h1 {
+    font-size: 18px;
+    font-family: 'Poppins-SemiBold';
+
+}
+
+h2 {
+    font-size: 16px;
+    font-family: 'Poppins-SemiBold';
+
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Poppins';
+
+}
+
+a {
+    color: var(--primary)
+}
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+
+
+/* Mobile wrapper */
+.wrapper {
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 80%;
+    /* margin: 50px 20px; */
+}
+
+
+/* Alignment to center (not sure this is the right way but why not) */
+.align-center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* For all CTA buttons */
+.button {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--button-color);
+    padding: 12px 24px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    color: var(--white);
+
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}
+
+/* For CTA buttons with full length */
+.longbtn {
+    width: 250px;
+}
+
+.button-background {
+    background-color: var(--background-beige);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    border-top: var(--line-color) 2px solid;
+
+}
+
+/* Edit and delete */
+
+.edit-delete {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.fixed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row nowrap;
+    padding: 20px;
+
+    position: fixed;
+    background-color: var(--background-beige);
+    width: 50%;
+
+    z-index: 100;
+}
+
+.header {
+    background-color: var(--background-beige);
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 50;
+}
+
+.icon-img-resize {
+    width: 30px;
+}
+.cart-icon {
+    opacity: 0;
+}
+
+/* .cart-title {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.back-icon {
+    position: fixed;
+    top: 29px;
+    width: 30px;
+} */
+
+.cart-order-text {
+    display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.cart-order-item {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0 10px;
+    position: relative;
+}
+
+/* cart item image size */
+.cart-item-image {
+    width: 77px;
+}
+
+/* quantity number  */
+.quantity {
+    position: absolute;
+    top: 58px;
+    left: 12px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+
+
+.note {
+    margin: 0 auto;
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: var(--background-beige);
+    border: 1.6px solid var(--line-color);
+    border-radius: 4.3px;
+}
+
+.line {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid var(--line-color);
+    margin: 1em 0;
+    padding: 0;
+}
+
+.text-line {
+    margin: 10px 0 ;
+}
+
+.text-line--top {
+    margin-top: -2px;
+}
+
+
+.wait-time-text {
+    position: absolute;
+    margin: auto;
+    left: 75px;
+    top: 90px;
+
+}
+
+.wait-time-penguin{
+    width: 100%;
+    position: relative;
+    top: 20px;
+    margin-bottom: -12px;
+    margin-left: 50px;
+
+}
+
+.utensil-btn {
+    background-color: var(--background-beige);
+    border: 1.6px solid var(--primary);
+    border-radius: 10px;
+    padding: 10px 5px;
+    height: 120px;
+    width: 90px;
+    margin: 0 ;
+    
+}
+
+.utensil-btn:hover {
+    cursor: pointer;
+}
+
+
+.all-utensils {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.utensil-img-resize{
+    height: 60%;
+}
+
+
+
+/* space at the bottom to scroll */
+.bottom-space {
+    height: 100px;
+}
+.top-space {
+    height: 60px;
+}
