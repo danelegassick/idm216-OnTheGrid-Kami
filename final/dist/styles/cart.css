@@ -69,11 +69,9 @@ a {
 
 
 /* Mobile wrapper */
-.wrapper {
-    margin-left: auto;
-    margin-right: auto; 
-    max-width: 80%;
-    /* margin: 50px 20px; */
+.wrapper {    
+    padding: 1rem;
+
 }
 
 
@@ -105,9 +103,9 @@ a {
 }
 
 /* For CTA buttons with full length */
-.longbtn {
-    width: 100%;
-}
+/* .longbtn {
+    width: 90%;
+} */
 
 .button-background {
     background-color: var(--background-beige);
@@ -182,6 +180,10 @@ a {
     position: relative;
 }
 
+.order-info {
+    margin: 0;
+}
+
 /* cart item image size */
 .cart-item-image {
     width: 77px;
@@ -240,7 +242,7 @@ a {
     position: relative;
     top: 20px;
     margin-bottom: -12px;
-    margin-left: 50px;
+    margin-left: 20px;
 
 }
 

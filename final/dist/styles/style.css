@@ -89,6 +89,7 @@ h3 {
     font-size: 1rem;
 }
 
+
 p {
     font-family: "Poppins", sans-serif;
     color: #111111;
@@ -1099,14 +1100,16 @@ hr {
   }
 
   .checkout-main {
-    padding: 5rem 1rem;
+    padding: 2rem 1rem 1rem;
   }
 
 /* SIGNIN PAGE */
 
 .wrapper-top {
-  margin: auto;
-  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto; 
+  max-width: 100%;
+  padding: 1rem;
 }
 
 .align-center {
@@ -1452,9 +1455,10 @@ a {
 
 /* Mobile wrapper */
 .wrapper {
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto; 
-  max-width: 80%;
+  max-width: 80%; */
+  padding: 1rem;
   /* margin: 50px 20px; */
 }
 
@@ -1485,20 +1489,9 @@ a {
 
 /* For CTA buttons with full length */
 .longbtn {
-  width: 350px;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--button-color);
-  padding: 0px 24px;
-  margin-bottom: 25px;
-  border-radius: 50px;
-  color: var(--white);
+  width: 100%;
+  margin: 1rem;
 
-  position: fixed;
-  bottom: 0;
-  z-index: 100;
 }
 
 
@@ -1519,6 +1512,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  height: 20px;
 }
 
 .fixed-header {
@@ -1571,8 +1565,16 @@ a {
 .cart-order-item {
   display: flex;
   gap: 30px;
-  margin: 20px 0 10px;
+  margin: 0 0 10px;
   position: relative;
+}
+
+.order-info {
+  margin: 0;
+}
+
+.order-margin-top {
+  margin: 0;
 }
 
 /* cart item image size */
@@ -1583,12 +1585,11 @@ a {
 /* quantity number  */
 .quantity {
   position: absolute;
-  bottom: 41px;
+  bottom: -7px;
   left: 12px;
   color: var(--white);
   font-weight: bold;
 }
-
 
 
 .note {
@@ -1600,6 +1601,14 @@ a {
   background-color: var(--background-beige);
   border: 1.6px solid var(--line-color);
   border-radius: 4.3px;
+}
+
+.edit-delete-icon {
+  /* display: flex;
+  align-items: flex-start;
+  justify-content: center; */
+  vertical-align: text-top;
+  display: inline-block;
 }
 
 .line {
@@ -1633,7 +1642,7 @@ a {
   position: relative;
   top: 20px;
   margin-bottom: -12px;
-  margin-left: 50px;
+  margin-left: 20px;
 
 }
 
@@ -1667,7 +1676,7 @@ a {
 
 /* space at the bottom to scroll */
 .bottom-space {
-  height: 100px;
+  height: 110px;
 }
 .top-space {
   height: 60px;
