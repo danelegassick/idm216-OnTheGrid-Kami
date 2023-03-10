@@ -99,11 +99,14 @@ a {
     position: fixed;
     bottom: 0;
     z-index: 100;
+    max-width: 450px;
+
+
 }
 
 /* For CTA buttons with full length */
 .longbtn {
-    width: 250px;
+    width: 100%;
 }
 
 .button-background {

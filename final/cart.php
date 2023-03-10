@@ -44,7 +44,7 @@ $drinks = get_drinks();
         </div>
         <!-- Note input -->
         <div>
-            <input class="signin-field" type="text" id="note" name="note" placeholder="Add note here...">
+            <input class="notes-field" type="text" id="note" name="note" placeholder="Add note here...">
         </div>
         <!--Edit/delete-->
         <div class="edit-delete">
@@ -95,7 +95,7 @@ if (isset($_SESSION['user'])) {
 ?>
         
         
-        " class="button longbtn"> 
+        " class="btn-dark"> 
             <p>
 <?php 
 if (isset($_SESSION['user'])) {

@@ -374,7 +374,7 @@ hr {
 
 .food-detail-text {
     padding: 1rem;
-}
+  }
 
 .inline {
     display: flex;
@@ -1058,7 +1058,7 @@ hr {
     font-family: 'Poppins',sans-serif;
     font-size: 16px;
     font-weight: 500;
-    justify-content: center;
+    justify-content: space-between;
     line-height: 1.25;
     margin: 1rem auto;
     max-height: 3.5rem;
@@ -1073,8 +1073,12 @@ hr {
     width: 100%;
     max-width: 450px;
     z-index: 0;
+
   }
-  
+
+  .btn-dark p {
+    color:rgba(255, 255, 255, 1)
+  }
   .btn-dark:hover,
   .btn-dark:focus {
     border-color: rgba(0, 0, 0, 0.65);
@@ -1463,7 +1467,7 @@ a {
 }
 
 /* For all CTA buttons */
-/* .button {
+.button {
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -1477,11 +1481,11 @@ a {
   position: fixed;
   bottom: 0;
   z-index: 100;
-} */
+}
 
 /* For CTA buttons with full length */
 .longbtn {
-  width: 250px;
+  width: 350px;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -1497,9 +1501,6 @@ a {
   z-index: 100;
 }
 
-.longbtn p {
-  color: white;
-}
 
 .button-background {
   background-color: var(--background-beige);
@@ -1678,4 +1679,17 @@ a {
 
 .footer-index img {
   width: 250px;
+}
+
+/* notes-field */
+
+.notes-field {
+  /* box-sizing: border-box; */
+  height: 44px;
+  width: calc(100% - 16px);
+  border: 1.6px solid var(--primary);
+  padding: 6px;
+  border-radius: 4.3px;
+  background-color: var(--background-beige);
+  margin-bottom: 18px;
 }

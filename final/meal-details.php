@@ -74,7 +74,7 @@ $site_url = site_url();
                 <br>
                 <h2>Add a note</h2>
                 <div>
-                    <input class="signin-field" type="text" id="notes" name="notes" placeholder="Add Note...">
+                    <input class="notes-field" type="text" id="notes" name="notes" placeholder="Add Note...">
                     <br>                
                 </div>
 
@@ -83,7 +83,11 @@ $site_url = site_url();
                 <div class="stepper">
                     <!-- Microinteraction goes here -->
                 </div>
-                <a class="btn-dark" href="<?php echo site_url();?>/cart.php">Add to cart $9</a>
+                <a class="btn-dark" href="<?php echo site_url();?>/cart.php">
+                <p>Add to cart </p>
+                <p>$9 </p>
+
+                </a>
             </div>
             </form>
 

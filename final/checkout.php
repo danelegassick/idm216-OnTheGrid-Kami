@@ -71,11 +71,15 @@ $drinks = get_drinks();
                 </button>
             </div>
         </div>
-        <div class="add-to-cart">
+        <div class="add-to-cart align-center-flex">
             <div class="stepper">
                 <!-- Microinteraction goes here -->
             </div>
-            <a class="btn-dark" href="<?php echo site_url();?>/confirming-loading.php">Checkout $15.16</a>
+            
+                <a class="btn-dark" href="<?php echo site_url();?>/confirming-loading.php">
+                    <p>Checkout </p>
+                    <p> $15.16 </p>
+        </a>
         </div>
 </div>
 
