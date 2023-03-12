@@ -31,11 +31,9 @@ $previousURL = $_SERVER['HTTP_REFERER'];
         </a>
     </div>
 <!-- CTA button: Sign in & checkout -->
-    <div class="align-center">
-        <button type="submit" class="button"> 
+        <button type="submit" class="btn-dark align-center"> 
             Sign in & checkout
         </button> 
-    </div>
     
 </form>
 </div>

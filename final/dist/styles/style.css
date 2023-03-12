@@ -89,6 +89,7 @@ h3 {
     font-size: 1rem;
 }
 
+
 p {
     font-family: "Poppins", sans-serif;
     color: #111111;
@@ -374,7 +375,7 @@ hr {
 
 .food-detail-text {
     padding: 1rem;
-}
+  }
 
 .inline {
     display: flex;
@@ -889,12 +890,14 @@ hr {
 }
 
 .in-progress-header {
-    background-color: var(--primary);
+    background-color: var(--accent-green);
     color: var(--background-beige);
     text-align: center;
     padding: 0.5rem 0;
     margin:  1.5rem 0.5rem 0 0.5rem;
     border-radius: 20px 20px 0 0;
+    border: solid 2px var(--primary);
+    border-bottom: none;
 }
 
 .in-progress-body {
@@ -966,17 +969,27 @@ hr {
 }
 
 .arrived-btn {
-    height: 3rem;
-    width: 80%;
-    margin: 0.5rem auto 0 auto;
-    border: var(--primary) solid 2px;
-    border-radius: 1.5rem;
-    background-color: var(--background-beige);
+  background-color: black;
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 4px 12px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  line-height: 1.25;
+  margin: 1rem auto;
+  max-height: 3.5rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: static;
+  text-decoration: none;
+  width: 100%;
+
 }
 
 .arrived-btn h2 {
     margin: 0;
     font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .past-order {
@@ -1058,7 +1071,7 @@ hr {
     font-family: 'Poppins',sans-serif;
     font-size: 16px;
     font-weight: 500;
-    justify-content: center;
+    justify-content: space-between;
     line-height: 1.25;
     margin: 1rem auto;
     max-height: 3.5rem;
@@ -1073,8 +1086,12 @@ hr {
     width: 100%;
     max-width: 450px;
     z-index: 0;
+
   }
-  
+
+  .btn-dark p {
+    color:rgba(255, 255, 255, 1)
+  }
   .btn-dark:hover,
   .btn-dark:focus {
     border-color: rgba(0, 0, 0, 0.65);
@@ -1095,14 +1112,16 @@ hr {
   }
 
   .checkout-main {
-    padding: 5rem 1rem;
+    padding: 2rem 1rem 1rem;
   }
 
 /* SIGNIN PAGE */
 
 .wrapper-top {
-  margin: auto;
-  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto; 
+  max-width: 100%;
+  padding: 1rem;
 }
 
 .align-center {
@@ -1448,9 +1467,10 @@ a {
 
 /* Mobile wrapper */
 .wrapper {
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto; 
-  max-width: 80%;
+  max-width: 80%; */
+  padding: 1rem;
   /* margin: 50px 20px; */
 }
 
@@ -1463,7 +1483,7 @@ a {
 }
 
 /* For all CTA buttons */
-/* .button {
+.button {
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -1477,29 +1497,15 @@ a {
   position: fixed;
   bottom: 0;
   z-index: 100;
-} */
+}
 
 /* For CTA buttons with full length */
 .longbtn {
-  width: 250px;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--button-color);
-  padding: 0px 24px;
-  margin-bottom: 25px;
-  border-radius: 50px;
-  color: var(--white);
+  width: 100%;
+  margin: 1rem;
 
-  position: fixed;
-  bottom: 0;
-  z-index: 100;
 }
 
-.longbtn p {
-  color: white;
-}
 
 .button-background {
   background-color: var(--background-beige);
@@ -1518,6 +1524,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  height: 20px;
 }
 
 .fixed-header {
@@ -1570,8 +1577,16 @@ a {
 .cart-order-item {
   display: flex;
   gap: 30px;
-  margin: 20px 0 10px;
+  margin: 0 0 10px;
   position: relative;
+}
+
+.order-info {
+  margin: 0;
+}
+
+.order-margin-top {
+  margin: 0;
 }
 
 /* cart item image size */
@@ -1582,12 +1597,11 @@ a {
 /* quantity number  */
 .quantity {
   position: absolute;
-  bottom: 41px;
+  bottom: -7px;
   left: 12px;
   color: var(--white);
   font-weight: bold;
 }
-
 
 
 .note {
@@ -1599,6 +1613,14 @@ a {
   background-color: var(--background-beige);
   border: 1.6px solid var(--line-color);
   border-radius: 4.3px;
+}
+
+.edit-delete-icon {
+  /* display: flex;
+  align-items: flex-start;
+  justify-content: center; */
+  vertical-align: text-top;
+  display: inline-block;
 }
 
 .line {
@@ -1632,7 +1654,7 @@ a {
   position: relative;
   top: 20px;
   margin-bottom: -12px;
-  margin-left: 50px;
+  margin-left: 20px;
 
 }
 
@@ -1666,7 +1688,7 @@ a {
 
 /* space at the bottom to scroll */
 .bottom-space {
-  height: 100px;
+  height: 110px;
 }
 .top-space {
   height: 60px;
@@ -1678,4 +1700,17 @@ a {
 
 .footer-index img {
   width: 250px;
+}
+
+/* notes-field */
+
+.notes-field {
+  /* box-sizing: border-box; */
+  height: 44px;
+  width: calc(100% - 16px);
+  border: 1.6px solid var(--primary);
+  padding: 6px;
+  border-radius: 4.3px;
+  background-color: var(--background-beige);
+  margin-bottom: 18px;
 }
