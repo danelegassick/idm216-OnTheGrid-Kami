@@ -58,7 +58,7 @@ $site_url = site_url();
                         <p>mild-</p>
                     </div>
                     <div class="slidecontainer">
-                        <input type="range" min="1" max="3" value="1" class="slider mild" id="myRange">
+                        <input type="range" min="1" max="3" value="1" class="slider mild" id="myRange" name='spiceID'>
                     </div>
                 </div>
                 <h2>Add protein (+$1)</h2>
@@ -71,9 +71,11 @@ $site_url = site_url();
                     <?php include_once __DIR__ . '/_components/food-details/diet-restrictions.php'; ?>
                 </div>
                 <br>
-                <h2>Add a note</h2>
+                <h2>
+                    <label for="note">Add a note</label>
+                </h2>
                 <div>
-                    <input class="signin-field" type="text" id="notes" name="notes" placeholder="Add Note...">
+                    <input class="notes-field" type="text" id="note" name="note" placeholder="Add Note...">
                     <br>                
                 </div>
 

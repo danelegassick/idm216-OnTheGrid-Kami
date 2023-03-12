@@ -3,7 +3,21 @@ include_once 'app.php';
 
 $orderTotal = 0;
 
-$query = "SELECT orders.id, orders.quantity, users.first_name, meals.item_name AS meal_name, meals.price AS meal_price, meals.image AS meal_image, GROUP_CONCAT(protein.name SEPARATOR ', ') AS protein_name, SUM(protein.price) AS protein_price, GROUP_CONCAT(restrictions.name SEPARATOR ', ') AS restrictions_name, spice.spice_level, sides.item_name AS side_name, sides.price AS side_price, sides.image AS side_image, drinks.item_name AS drink_name, drinks.price AS drink_price, drinks.image AS drink_image\n"
+$query = "SELECT orders.id, 
+orders.quantity, 
+users.first_name, 
+meals.item_name AS meal_name, 
+meals.price AS meal_price, 
+meals.image AS meal_image, 
+GROUP_CONCAT(DISTINCT protein.name SEPARATOR ', ') AS protein_name, 
+SUM(DISTINCT protein.price) AS protein_price, 
+GROUP_CONCAT(DISTINCT restrictions.name SEPARATOR ', ') AS restrictions_name, 
+spice.spice_level, sides.item_name AS side_name, 
+sides.price AS side_price, 
+sides.image AS side_image, 
+drinks.item_name AS drink_name, 
+drinks.price AS drink_price, 
+drinks.image AS drink_image\n"
 
     . "FROM orders\n"
 
