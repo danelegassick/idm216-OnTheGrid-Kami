@@ -26,6 +26,8 @@ $drink_value = isset($_POST['drinkID']) ? sanitize_value($_POST['drinkID']) : 0;
 
 $query = "INSERT INTO orders (userID, mealID, proteinID, spiceID, restrictionID, sideID, drinkID) VALUES ('{$userID_value}', '{$meal_value}', '{$protein_value}', '{$restriction_value}', '{$spice_value}', '{$side_value}', '{$drink_value}')";
 $result = mysqli_query($db_connection, $query);
+// var_dump($query);
+// die;
 
 
 if ($result) {

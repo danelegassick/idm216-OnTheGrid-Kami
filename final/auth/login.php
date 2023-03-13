@@ -32,7 +32,10 @@ $previousURL = $_SERVER['HTTP_REFERER'];
     </div>
 <!-- CTA button: Sign in & checkout -->
     <div class="align-center">
-        <button type="submit" class="button"> 
+            <!-- <input type='hidden' name='userID' value='<?php echo "{$user['id']}"; ?>'/>
+            <input type='hidden' name='mealID' value='<?php echo "{$mealID}"; ?>'/> -->
+        <button type="submit" class="btn-dark align-center"> 
+
             Sign in & checkout
         </button> 
     </div>

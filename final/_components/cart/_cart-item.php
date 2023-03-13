@@ -1,5 +1,6 @@
 <?php 
 
+// $orderTotal = 0;
 $quantity = intval($row['quantity']);
 $meal_price = intval($row['meal_price']);
 $price = $meal_price + intval($row['protein_price']);
