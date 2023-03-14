@@ -20,7 +20,7 @@ $drinks = get_drinks();
 </div>
 
 <!-- LINE -->
-<span class="line text-line text-line--top"></span>
+<hr class="order-totals-hr">
 
 <div class="wrapper">
 <!--Order items-->
@@ -62,7 +62,7 @@ $drinks = get_drinks();
     </div>
 </div>
     <!-- LINE -->
-    <span class="line"></span>
+    <hr class="order-totals-hr">
 
 <div class="wrapper">
     <div class="align-center">
@@ -85,10 +85,10 @@ $drinks = get_drinks();
             </button>
         </div>
 </div>
-<div class="button-background">
+<div >
 
     <!-- CTA Button -->
-    <div class="align-center-flex">
+    <div class="align-center-flex button-background">
         <a href="
         
 <?php 
