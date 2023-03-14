@@ -9,9 +9,10 @@ $drinks = get_drinks();
 
 
 <!--Wait time-->
+<div class="cart">
 <div class="wrapper">
-    <div class="align-center">
-        <img src="<?php echo site_url(); ?>/dist/images/cart-images/wait-time-penguin.png" alt="wait time" class="wait-time-penguin align-center"/>
+    <div class="align-center wait-time">
+        <img src="<?php echo site_url(); ?>/dist/images/cart-images/wait-time-penguin.png" alt="wait time" class="wait-time-image wait-time-penguin align-center"/>
         <!-- <h2 class="wait-time-text">
             The wait time is <span style="color:var(--accent-green)">13 mins</span>!
         </h2> -->
@@ -20,7 +21,7 @@ $drinks = get_drinks();
 </div>
 
 <!-- LINE -->
-<hr class="order-totals-hr">
+<hr class="order-totals-hr hr-adj">
 
 <div class="wrapper">
 <!--Order items-->
@@ -120,5 +121,6 @@ if (isset($_SESSION['user'])) {
           <!-- backdrop of bottom fixed to bottom -->
 </div>
 <div class="bottom-space"> </div>
+</div>
 
 <?php include_once __DIR__ . '/_components/footer.php'; ?>

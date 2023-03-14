@@ -1887,12 +1887,15 @@ a {
 }
 
 .wait-time-penguin{
-  width: 100%;
   position: relative;
-  top: 20px;
-  margin-bottom: -12px;
-  margin-left: 20px;
+  margin-bottom: -25px;
+  z-index: 100;
 
+}
+
+.hr-adj {
+  position: relative;
+  margin-top: -22px;
 }
 
 .utensil-btn {
@@ -1952,6 +1955,7 @@ a {
   margin-bottom: 18px;
 }
 
+/*CART and CHECKOUT PAGE desktop */
 @media only screen and (min-width: 1200px) {
   .align-center-flex{
     text-align: center;
@@ -1964,6 +1968,7 @@ a {
   margin: 20px 0;
 }
 
+/*button bigger for desktop*/
 .utensil-btn {
   background-color: var(--background-beige);
   border: 1.6px solid var(--primary);
@@ -1978,4 +1983,21 @@ a {
 .utensil-btn:hover {
   /* do hover */
 }
+
+.wait-time-penguin {
+  width: 400px;
+}
+
+.cart {
+  margin: 0 20%;
+}
+
+.checkout-main {
+  margin: 0 20%;
+}
+
+.cut-off-logo {
+  width: 100px;
+}
+
 }
