@@ -83,7 +83,7 @@ $site_url = site_url();
                     <div class="stepper">
                         <!-- Microinteraction goes here -->
                     </div>
-                    <input type='hidden' name='userID' value='<?php echo "{$currentUser['id']}"; ?>'/>
+                    <input type='hidden' name='userID' value='<?php echo "{$user['id']}"; ?>'/>
                     <input type='hidden' name='mealID' value='<?php echo "{$mealID}"; ?>'/>
                     <!-- <button type='submit'>Submit</button> -->
                     <button type='submit' class="btn-dark">Add to cart $9</button>

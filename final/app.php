@@ -32,6 +32,26 @@ include_once __DIR__ . '/_includes/database.php';
 include_once __DIR__ . '/_includes/helper-functions.php';
 include_once __DIR__ . '/_includes/users-functions.php';
 include_once __DIR__ . '/_includes/menu-functions.php';
+include_once __DIR__ . '/_includes/users.php';
 
 
-$currentUser = ["id" => 3];
+
+
+//ADDED FOR LOGIN
+$isLoginPage = strpos($_SERVER['REQUEST_URI'], '/auth/login.php') !== false;
+$sessionUserId = $_SESSION['user']['id'] ?? null;
+$user = $sessionUserId ? get_user_by_id($sessionUserId) : create_guest_user();
+// var_dump($sessionUserId);
+// die;
+// $currentUser = ["id" => 3];
+
+// var_dump ($_SESSION['user']);
+// die;
+
+//ADDED FOR LOGIN
+$userOrder = null;
+if (!$user) {
+    $user = create_guest_user();
+}
+$currentUserOrder = getOrderByUserId($user['id']);
+$userOrder= mysqli_fetch_array($currentUserOrder);

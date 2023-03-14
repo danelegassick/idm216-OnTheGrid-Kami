@@ -15,7 +15,7 @@ include_once __DIR__ . '/../../_components/header-back.php';
     </div>
 
     <div class="signin align-center-notext">
-        <form action="<?php echo site_url(); ?>/_includes/process_users.php" method="POST">
+        <form action="<?php echo site_url(); ?>/_includes/process-signup.php" method="POST">
 
         <label class="signin-label" for="first_name">First Name</label>
             <br>

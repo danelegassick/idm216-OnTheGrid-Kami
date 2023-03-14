@@ -422,9 +422,9 @@ hr {
       color: var(--primary);
       text-decoration: none; */
     }
-    .menu__item:hover {
-      /* all: unset; */
-    }
+    /* .menu__item:hover {
+      all: unset;
+    } */
 
 
     .nav-cart a {
