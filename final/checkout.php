@@ -17,7 +17,7 @@ $drinks = get_drinks();
         </button>
         <div class="order-totals">
             <div class="order-title">
-                <h2>JERVO'S ORDER</h2>
+                <h2 class="all-caps"><?php echo $_SESSION['user']['first_name']; ?>'S ORDER</h2>
             </div>
             <hr class="order-totals-hr">
             <div class="order-line-item">

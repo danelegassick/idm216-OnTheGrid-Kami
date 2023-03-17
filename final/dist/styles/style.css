@@ -957,6 +957,7 @@ hr {
 }
 
 .cut-off-logo {
+    width: 100px;
     position: absolute;
     right: 0;
 }
@@ -1997,7 +1998,11 @@ a {
 }
 
 .cut-off-logo {
-  width: 100px;
+  width: 150px;
 }
 
+}
+
+.all-caps {
+  text-transform: uppercase;
 }
