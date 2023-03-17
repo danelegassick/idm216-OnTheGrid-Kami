@@ -44,6 +44,6 @@ function RedirectToURL($url, $waitmsg = 0)
 
 <?php 
 // sleep(2);
-RedirectToURL(site_url() . "/order-confirmation.html", 2);
+RedirectToURL(site_url() . "/order-confirmation.html", 4.5);
 ?>
 </html>
