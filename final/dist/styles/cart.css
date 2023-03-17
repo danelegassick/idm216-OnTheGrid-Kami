@@ -281,3 +281,9 @@ a {
 .top-space {
     height: 60px;
 }
+
+/* cart utensil buttons */
+.utensil-btn:hover {
+    background-color: var(--background-darker);
+    }
+

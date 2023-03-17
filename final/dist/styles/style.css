@@ -2006,3 +2006,15 @@ a {
 .all-caps {
   text-transform: uppercase;
 }
+
+/* cart utensil buttons */
+.utensil-btn:hover {
+background-color: var(--background-darker);
+}
+
+.current-credit:hover {
+  background-color: #5F8EBA;
+}
+.current-credit:active {
+  background-color: #1A6CB9;
+}

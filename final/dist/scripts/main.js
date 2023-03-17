@@ -22,4 +22,3 @@ slider.addEventListener('input', function() {
       document.getElementById("flameImg").src = site_url + "/dist/images/hot-flame.svg";
   }
 }, false);
-
