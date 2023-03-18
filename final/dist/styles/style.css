@@ -621,8 +621,9 @@ hr {
     /* overflow: hidden; */
 }
 
-.food-detail-text {
-    padding: 1rem;
+.item-description, .customization-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
 .inline {
@@ -655,6 +656,7 @@ hr {
     object-fit: cover;
     height: 330px;
     margin: auto;
+    padding-bottom: 1rem;
 }
 
 .protein-grid {
@@ -676,6 +678,7 @@ hr {
 }
 
 .protein-grid div p {
+  font-size: 16px;
     text-align: center;
     line-height: 0;
 }
@@ -695,11 +698,10 @@ hr {
     border: 2px solid #000000;
     overflow: auto;
     float: left;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #ck-button:hover {
-    background: var(--background-darker);
+    background-color: var(--background-darker);
     color: black;
 }
 
@@ -711,7 +713,15 @@ hr {
     text-align: center;
     padding: 3px 10px;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
+    color: #000;
+    transition: color 0.4s ease-in-out;
+}
+
+
+#ck-button label span {
+  background-color: var(--background-beige);
+  transition: background-color 0.4s ease-in-out;
 }
 
 #ck-button label input {
@@ -726,20 +736,49 @@ hr {
 }
 
 .protein-grid #ck-button {
-    margin: 0;
+    margin: 4px;
     background-color: var(--background-beige);
     border: 0 solid #000000;
     border-radius: 10px;
     overflow: auto;
     float: left;
+    
 }
 
 .protein-grid #ck-button input:checked + span {
-    background-color: var(--background-darker);
+    background-color: #000;
     color: var(--background-beige);
     border: 2px solid #000000;
     border-radius: 10px;
 
+}
+
+.protein-grid #ck-button label span {
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 2px solid #000;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.4s ease-in-out;
+  }
+
+  .protein-grid #ck-button span img{
+    filter: invert(0);
+    transition: filter 0.4s ease-in-out;
+  }
+  .protein-grid #ck-button span p{
+    filter: invert(0);
+    transition: filter 0.4s ease-in-out;
+
+  }
+
+.protein-grid #ck-button input:checked + span img{
+  filter: invert(1);
+}
+
+.protein-grid #ck-button input:checked + span p{
+  filter: invert(1);
 }
 
 .protein-grid #ck-button input:checked {
@@ -1948,4 +1987,108 @@ a {
   border-radius: 4.3px;
   background-color: var(--background-beige);
   margin-bottom: 18px;
+}
+
+.notes-field::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+.notes-field:focus {
+  font-family: "Poppins", sans-serif;
+
+}
+
+
+
+@media screen and (min-width: 750px) {
+ 
+  .modal .x-out {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 55px;
+    right: 10px;
+    background-color: var(--background-beige);
+    height: 44px;
+    width: 44px;
+    border-radius: 100%;
+    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.13));
+
+}
+
+.meal-details-container {
+    margin-left:5%;
+    margin-right:5%;
+}
+  
+  .image-description-container {
+    display: grid;
+    grid-template-areas:
+    'hero-image description';
+  }
+
+        .food-detail-hero {
+          grid-area: hero-image; 
+          width: 100%;
+          border-radius: 27px;
+          padding-bottom: 0;
+        }
+        .item-description {
+          grid-area: description;
+          padding-left: 5%;
+          margin-right:20px;
+        }
+
+  .customization-container {
+    display: grid;
+    grid-template-areas:
+    /* 'hero-image description' */
+    'custom-spicelevel spice-selection'
+    'add-protein protein-selection'
+    'select-dietaryneeds dietary-selection'
+    'add-note note-field';
+  }
+
+        .spice-title { 
+          grid-area: custom-spicelevel;
+        }
+        .flame-grid { 
+          grid-area: spice-selection; 
+        }
+        .protein-title { 
+          grid-area: add-protein; 
+        }
+        .protein-grid { 
+          grid-area: protein-selection; 
+        }
+        .diet-title {
+          grid-area: select-dietaryneeds;
+        }
+        .checkbox-container {
+          grid-area: dietary-selection;
+          padding-right: 60px;
+        }
+        .note-title { 
+          grid-area: add-note; 
+        }
+        .note-box { 
+          grid-area: note-field; 
+        }
+
+
+  .title-container {
+    justify-self: flex-end;
+    margin-left: 100px;
+  }
+
+  .customization-field {
+    margin-left: 5%;
+    margin-bottom: 50px;
+  }
+
+  h2.food-detail-title {
+    margin: 0;
+    text-align: right;
+  }
 }
