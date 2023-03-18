@@ -10,7 +10,7 @@ include_once __DIR__ . '/../_components/header.php';
     <div class="description align-center">
         <img class="logo" src="<?php echo site_url() . '/dist/images/kami-logo.svg';?>">
         <h2 class=""> Sign in to continue to checkout.</h2>
-        <p> First time? <a href="" class="underline">Create an account</a></p>
+        <p> First time? <a href="<?php echo site_url() . "/admin/users/create.php";?>" class="underline">Create an account.</a></p>
     </div>
 <!-- Sign in input fields for email and password -->
     <div class="signin align-center-notext">
