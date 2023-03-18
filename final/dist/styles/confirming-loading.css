@@ -72,13 +72,18 @@ body{
     background-position:
         0% 0%,
         100% 0%,
-        0% 100%,
+        -2% 102%,
         100% 100%;
     background-repeat: 
         no-repeat,
         no-repeat,
         no-repeat,
         no-repeat;
+    background-size:
+        calc(5vw + 140px),
+        calc(5vw + 150px),
+        calc(6vw + 175px),
+        calc(5vw + 150px);
 }
 
 .wrapper-top {
