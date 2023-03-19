@@ -172,6 +172,7 @@ function create_guest_user(){
 function add_user_to_session($user) {
     $_SESSION['user'] = [
         'id' => $user['id'],
+        'first_name' => $user['first_name']
     ];
 }
 

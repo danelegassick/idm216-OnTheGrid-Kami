@@ -6,6 +6,8 @@ $meals = get_meals();
 $sides = get_sides();
 $drinks = get_drinks();
 ?>
+
+
 <div class="menu">
 <div class="wait-time">
     <img class="wait-time-image" src="<?php echo site_url() . '/dist/images/open-now.svg';?>" alt="kami-logo">

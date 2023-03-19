@@ -127,7 +127,7 @@ hr {
     gap: 3rem;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 980px) {
     .grid-3-col {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -197,7 +197,7 @@ hr {
   opacity: 1;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 980px) {
   .nav-cart {
     margin-left: auto;
     height: 44px;
@@ -353,8 +353,68 @@ hr {
     width: 300px;
     bottom: 2rem;
   }
+
+  .nav__button_signin {
+    display: none;
+  }
+
+  .nav__button_signup {
+    display: none;
+  }
+  .nav__kami_logo {
+    display: none;
+  }
+  .nav-logo-container .menu__greeting {
+    display: none;
+  }
 }
-  @media only screen and (min-width: 751px) {
+  @media only screen and (min-width: 981px) {
+    .nav__kami_logo {
+      width: 70px;
+      height: 70px;
+    }
+
+    .menu_green {
+      color: var(--accent-green);
+      text-transform: capitalize;
+    }
+
+    .menu__greeting {
+      margin: unset;
+      font-size: 1.375rem;
+      font-family: "Poppins-SemiBold", sans-serif;
+      padding: 0 1rem 0 2rem;
+    }
+
+  .nav__button_signin {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    min-width: 100px;
+    width: fit-content;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 1rem 0 2rem;
+    padding: 16px 14px 18px;
+    color: var(--button-color);
+    box-shadow: inset 0 0 0 2px var(--button-color);
+    background-color: transparent;
+    /* height: 44px;         */
+  }
+
+  .nav__button_signin:hover {
+    color: var(--button-color);
+    background-color: var(--background-darker);
+  }
+
+  
+
 
     #menu__toggle {
       display: none;
@@ -364,6 +424,10 @@ hr {
     }
     .nav-logo {
       display: inline-block;
+      /* padding-bottom: 1rem; */
+      line-height: 1;
+      font-size: 40px;
+      margin: unset;
       margin-left: 20px;
     }
     .nav-cart {
@@ -414,6 +478,7 @@ hr {
 
     .menu__item {
       all: unset;
+      cursor: pointer;
       /* display: inline-block;
       flex-direction: row;
       justify-content: flex-start;
@@ -547,6 +612,8 @@ hr {
 
     .nav-logo-container {
       grid-area: logo;
+      display: flex;
+      align-items: center;
     }
 
     .hamburger-menu {

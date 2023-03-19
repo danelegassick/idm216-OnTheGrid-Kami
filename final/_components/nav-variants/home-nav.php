@@ -48,8 +48,12 @@
         </div>
     </div>
 
-    <div>
+    <div class="nav-logo-container">
+        <img class="nav__kami_logo" src="<?php echo site_url() . '/dist/images/kami-logo.svg';?>" alt="Kami-logo">
         <h1 class="nav-logo"><?php echo $page_title; ?></h1>
+
+        <a class="nav__button_signin" href="<?php echo site_url() . '/auth/login.php';?>">Sign In</a>
+        <a class="menu__item nav__button_signup" href="<?php echo site_url() . '/admin/users/create.php';?>">Sign Up</a>
     </div>
 
 <div class="nav-cart">

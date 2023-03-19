@@ -13,7 +13,12 @@
             </div>
             <div class="menu__intro">
                 <div>
-                    <h1 class="menu__greeting">Hi <?php echo $_SESSION['user']['first_name']; ?>!</h1>
+                    <h1 class="menu__greeting">
+                        Hi 
+                        <?php 
+                            echo $_SESSION['user']['first_name']; 
+                        ?>!
+                    </h1>
                     <a href="<?php echo site_url() . '/auth/logout.php';?>" class="menu__item_signin">Sign Out</a>
                 </div>
             </div>
@@ -45,7 +50,19 @@
 </div>
 
     <div class="nav-logo-container">
+        <img class="nav__kami_logo" src="<?php echo site_url() . '/dist/images/kami-logo.svg';?>" alt="Kami-logo">
         <h1 class="nav-logo"><?php echo $page_title; ?></h1>
+
+        <h2 class="menu__greeting">
+                        Hi 
+            <span class="menu_green">
+            <?php 
+                echo $_SESSION['user']['first_name'];
+            ?></span>!
+        </h2>
+                    <a href="<?php echo site_url() . '/auth/logout.php';?>" class="menu__item nav__button_signup">Sign Out</a>
+        
+        <!-- <a class="menu__item nav__button_signup" href="<?php echo site_url() . '/auth/logout.php';?>">Logout</a> -->
     </div>
     <div class="nav-cart">
         <a href="<?php echo site_url();?>/empty-cart.php">

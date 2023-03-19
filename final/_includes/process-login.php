@@ -27,6 +27,7 @@ if ($newUser) {
     delete_user_by_id($user['id']);
     $_SESSION['user'] = [
         'id' => $newUser['id'],
+        'first_name' => $newUser['first_name'],
     ];
 
     // redirect_to('/checkout.php');   
