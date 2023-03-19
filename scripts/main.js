@@ -145,4 +145,3 @@ laurenImg.addEventListener('mouseout', () => {
 });
 
 
-

@@ -992,6 +992,7 @@ hr {
 }
 
 .cut-off-logo {
+    width: 100px;
     position: absolute;
     right: 0;
 }
@@ -1121,7 +1122,7 @@ border-open {
 .order-totals-hr:first-of-type, .order-totals-hr:last-of-type {
     position: absolute;
     left: 0;
-    width: 99%;
+    width: 100%;
     overflow-x: auto;
     height: 1.5px;
 }
@@ -1929,6 +1930,8 @@ a {
 .button-background {
   background-color: var(--background-beige);
   position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
   width: 100%;
   height: 100px;
@@ -2069,12 +2072,15 @@ a {
 }
 
 .wait-time-penguin{
-  width: 100%;
   position: relative;
-  top: 20px;
-  margin-bottom: -12px;
-  margin-left: 20px;
+  margin-bottom: -25px;
+  z-index: 100;
 
+}
+
+.hr-adj {
+  position: relative;
+  margin-top: -22px;
 }
 
 .utensil-btn {
@@ -2095,7 +2101,7 @@ a {
 
 .all-utensils {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 20px 0;
 }
 
@@ -2133,6 +2139,71 @@ a {
   background-color: var(--background-beige);
   margin-bottom: 18px;
 }
+
+
+/*CART and CHECKOUT PAGE desktop */
+@media only screen and (min-width: 1200px) {
+  .align-center-flex{
+    text-align: center;
+    width: 100%;
+  }
+
+.all-utensils {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+/*button bigger for desktop*/
+.utensil-btn {
+  background-color: var(--background-beige);
+  border: 1.6px solid var(--primary);
+  border-radius: 10px;
+  padding: 10px 5px;
+  height: 200px;
+  width: 150px;
+  margin: 0 ;
+  
+}
+
+.utensil-btn:hover {
+  /* do hover */
+}
+
+.wait-time-penguin {
+  width: 400px;
+}
+
+.cart {
+  margin: 0 20%;
+}
+
+.checkout-main {
+  margin: 0 20%;
+}
+
+.cut-off-logo {
+  width: 150px;
+}
+
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+/* cart utensil buttons */
+.utensil-btn:hover {
+background-color: var(--background-darker);
+}
+
+.current-credit:hover {
+  background-color: #5F8EBA;
+}
+.current-credit:active {
+  background-color: #1A6CB9;
+}
+
 
 .notes-field::placeholder {
   font-family: 'Poppins', sans-serif;
@@ -2277,4 +2348,3 @@ a {
 .stepper-plus:hover, .stepper-minus:hover {
     cursor: pointer;
 }
-
