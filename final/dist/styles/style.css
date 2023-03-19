@@ -996,7 +996,32 @@ hr {
     right: 0;
 }
 
-.pickup-select {
+
+
+
+
+.custom-select{
+    display: inline;
+
+    position: relative;
+    width: 275px;
+    /* margin: 0 auto; */
+    height: 2rem;
+
+
+
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: #439980;
+
+    width: 275px;
+
+
     background-color: var(--accent-green);
     border: none;
     color: var(--background-beige);
@@ -1006,12 +1031,75 @@ hr {
     cursor: pointer;
     height: 2.75rem;
     border-radius: 1.375rem;
-    padding: 1rem 1.5rem;
     margin: 1rem auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+border-closed {
+    border-radius: 1rem;
+}
+
+border-open {
+    border-radius: 1rem 1rem 0 0;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: relative;
+    content: "";
+    /* top: 14px;
+    right: 10px; */
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+    /* margin-right: 3rem; */
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+
+}
+
+/* Style items (options): */
+.select-items {
+    width: 275px;
+    margin: 0 auto;
+    position: absolute;
+    background-color: #439980;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    /* border-radius: 0 0 1rem 1rem; */
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ */
+
+
+
 
 .order-title {
     display: flex;
@@ -1058,34 +1146,75 @@ hr {
     font-size: 1.25rem;
 }
 
+.tip-percent {
+    font-size: 0.5rem;
+}
 
-.tip-option {
-    height: 2.5rem;
+/* ~~~~~~~~~~~~ */
+
+.tip-option-button {
     margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.tip-option-button > span {
+    position: relative;
+    top: 1px;
+    left: -2rem;
+    color: var(--accent-green);
+}
+
+.tip-option-radio { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 2.5rem;
+    border-radius: 1.25rem;
     aspect-ratio: 1;
     border: var(--accent-green) solid 1px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 1.25rem;
-    font-size: 0.75rem;
     color: var(--accent-green);
     cursor: pointer;
 }
 
-.selected-tip {
+.tip-option-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tip-option-text {
+    font-size: 0.75rem;
+}
+
+.tip-option-radio:focus { 
+    outline: none;
+}
+
+.tip-option-radio:checked {
     background-color: var(--accent-green);
+}
+
+.tip-option-radio:checked ~ .tip-option-text {
     color: var(--background-beige);
 }
 
-/* .custom-tip {
-    /* use https://codepen.io/sosuke/pen/Pjoqqp to get filter from hex 
-    filter: invert(52%) sepia(22%) saturate(810%) hue-rotate(112deg) brightness(96%) contrast(93%);
-} */
-
-.tip-percent {
-    font-size: 0.5rem;
+.tip-option-radio:checked .custom-tip {
+    color: var(--background-beige);
 }
+
+.tip-option-radio:checked ~ .tip-percent {
+    color: var(--background-beige);
+}
+
+
+
+/* ~~~~~~~~~~~~ */
+
+
+
 
 .select-payment {
     margin: 3rem 1.5rem;
@@ -1153,23 +1282,28 @@ hr {
 .orders-line {
     margin-left: 1rem;
     margin-top: 1rem;
+    margin: 1rem auto 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 500px;
+    position: relative;
 }
 
 .orders-line h2 {
     font-size: 1rem;
+    margin-left: 1rem;
 }
 
 .orders-image {
     position: absolute;
-    right: 24px;
+    right: 1rem;
     z-index: 1;
 }
 
 .in-progress-card {
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
+    max-width: 500px;
 }
 
 .in-progress-header {
@@ -1275,8 +1409,13 @@ hr {
     font-family: 'Poppins', sans-serif;
 }
 
+.past-orders-group {
+    margin: 0 1rem;
+}
+
 .past-order {
-    margin: 2rem 1rem;
+    margin: 2rem auto;
+    max-width: 450px;
 }
 
 .order-date-number {
@@ -1325,6 +1464,7 @@ hr {
     filter: grayscale(100%);
     opacity: 50%;
     width: 80%;
+    max-width: 500px;
     display: block;
     margin: 0 auto;
 }
@@ -1384,6 +1524,7 @@ hr {
   
   .btn-dark:hover {
     transform: translateY(-1px);
+    /* transform: translateY(-3px); */
   }
   
   .btn-dark:active {
@@ -1393,6 +1534,14 @@ hr {
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(0);
   }
+
+  .orders-button {
+    display: grid;
+}
+
+.orders-button > * {
+    justify-content: center;
+}
 
   .checkout-main {
     padding: 2rem 1rem 1rem;
@@ -2088,3 +2237,44 @@ a {
     text-align: right;
   }
 }
+
+
+.stepper {
+    width: 100px;
+    display: flex;
+    background-color: #000000;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 5rem;
+    max-height: 3.5rem;
+}
+
+.stepper-display {
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 1rem;
+    margin: 0 0.25rem;
+    font-weight: 500;
+
+}
+
+.stepper-plus, .stepper-minus {
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    height: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    /* margin-top: 15px; */
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+
+}
+
+.stepper-plus:hover, .stepper-minus:hover {
+    cursor: pointer;
+}
+

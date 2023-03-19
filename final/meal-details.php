@@ -60,7 +60,6 @@ $site_url = site_url();
         </div>
         
         <div class="customization-container">
-
                     <!-- <div class="spice-container"> -->
                         <div class="spice-title title-container">
                           <h2>Customize Spice Level</h2>
@@ -103,7 +102,6 @@ $site_url = site_url();
                             <div class="diet-title title-container">
                               <h2 class="food-detail-title">Select Dietary Needs</h2>
                             </div>
-
                             <div class="checkbox-container customization-field">
                             <?php include_once __DIR__ . '/_components/food-details/diet-restrictions.php'; ?>
                             </div>
@@ -122,11 +120,13 @@ $site_url = site_url();
                     <!-- </div> -->
         <br>           
         </div>
-
 <!-- ADD TO CART -->
             <div class="add-to-cart">
                     <div class="stepper">
-                        <!-- Microinteraction goes here -->
+                        <div class="stepper-minus">-</div>
+                        <h1 class="stepper-display">(..)</h1>
+                        <div class="stepper-plus">+</div>
+                    </div>
                     </div>
                     <a class="btn-dark" href="<?php echo site_url();?>/cart.php">
                       <p>Add to cart </p>
@@ -136,6 +136,6 @@ $site_url = site_url();
     </div>
   </form>
 </div>      
-<?php include_once __DIR__ . '/_components/footer.php'; ?>
+<script src="<?php echo site_url(); ?>/dist/scripts/stepper.js"></script>
 
 <?php include_once __DIR__ . '/_components/footer.php'; ?>
