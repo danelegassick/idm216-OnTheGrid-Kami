@@ -81,7 +81,9 @@ $site_url = site_url();
             </div>
             <div class="add-to-cart">
                 <div class="stepper">
-                    <!-- Microinteraction goes here -->
+                    <div class="stepper-minus">-</div>
+                        <h1 class="stepper-display">(..)</h1>
+                    <div class="stepper-plus">+</div>
                 </div>
                 <a class="btn-dark" href="<?php echo site_url();?>/cart.php">
                 <p>Add to cart </p>
@@ -93,4 +95,5 @@ $site_url = site_url();
 
         </div>
 
+<script src="<?php echo site_url(); ?>/dist/scripts/stepper.js"></script>
 <?php include_once __DIR__ . '/_components/footer.php'; ?>

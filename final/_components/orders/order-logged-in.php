@@ -30,64 +30,66 @@
             <h2>PAST ORDERS</h2>
         </div>
         <hr class="order-totals-hr">
-        <div class="past-order">
-            <div class="order-date-number">
-                <p class="order-date">10/28/2022</p>
-                <p class="order-number">#11223344</p>
+        <div class="past-orders-group">
+            <div class="past-order">
+                <div class="order-date-number">
+                    <p class="order-date">10/28/2022</p>
+                    <p class="order-number">#11223344</p>
+                </div>
+                <div class="past-order-card">
+                    <div class="orders-page-line-item">
+                        <h2>Bibimbap</h2>
+                        <h2>$11</h2>
+                    </div>
+                    <p class="orders-page-details">Beef (+$1)</p>
+                    <p class="orders-page-details">Medium Spice</p>
+                    <p class="orders-page-details">Note: Please take out sesame seeds!</p>
+                    <div class="orders-page-line-item">
+                        <h2>Bulgogi</h2>
+                        <h2>$20</h2>
+                    </div>
+                    <button class="orders-quick-add">add to cart</button>
+                </div>
             </div>
-            <div class="past-order-card">
-                <div class="orders-page-line-item">
-                    <h2>Bibimbap</h2>
-                    <h2>$11</h2>
+            <div class="past-order">
+                <div class="order-date-number">
+                    <p class="order-date">10/28/2022</p>
+                    <p class="order-number">#11223344</p>
                 </div>
-                <p class="orders-page-details">Beef (+$1)</p>
-                <p class="orders-page-details">Medium Spice</p>
-                <p class="orders-page-details">Note: Please take out sesame seeds!</p>
-                <div class="orders-page-line-item">
-                    <h2>Bulgogi</h2>
-                    <h2>$20</h2>
+                <div class="past-order-card">
+                    <div class="orders-page-line-item">
+                        <h2>Bibimbap</h2>
+                        <h2>$11</h2>
+                    </div>
+                    <p class="orders-page-details">Beef (+$1)</p>
+                    <p class="orders-page-details">Medium Spice</p>
+                    <p class="orders-page-details">Note: Please take out sesame seeds!</p>
+                    <div class="orders-page-line-item">
+                        <h2>Bulgogi</h2>
+                        <h2>$20</h2>
+                    </div>
+                    <button class="orders-quick-add">add to cart</button>
                 </div>
-                <button class="orders-quick-add">add to cart</button>
             </div>
-        </div>
-        <div class="past-order">
-            <div class="order-date-number">
-                <p class="order-date">10/28/2022</p>
-                <p class="order-number">#11223344</p>
-            </div>
-            <div class="past-order-card">
-                <div class="orders-page-line-item">
-                    <h2>Bibimbap</h2>
-                    <h2>$11</h2>
+            <div class="past-order">
+                <div class="order-date-number">
+                    <p class="order-date">10/28/2022</p>
+                    <p class="order-number">#11223344</p>
                 </div>
-                <p class="orders-page-details">Beef (+$1)</p>
-                <p class="orders-page-details">Medium Spice</p>
-                <p class="orders-page-details">Note: Please take out sesame seeds!</p>
-                <div class="orders-page-line-item">
-                    <h2>Bulgogi</h2>
-                    <h2>$20</h2>
+                <div class="past-order-card">
+                    <div class="orders-page-line-item">
+                        <h2>Bibimbap</h2>
+                        <h2>$11</h2>
+                    </div>
+                    <p class="orders-page-details">Beef (+$1)</p>
+                    <p class="orders-page-details">Medium Spice</p>
+                    <p class="orders-page-details">Note: Please take out sesame seeds!</p>
+                    <div class="orders-page-line-item">
+                        <h2>Bulgogi</h2>
+                        <h2>$20</h2>
+                    </div>
+                    <button class="orders-quick-add">add to cart</button>
                 </div>
-                <button class="orders-quick-add">add to cart</button>
-            </div>
-        </div>
-        <div class="past-order">
-            <div class="order-date-number">
-                <p class="order-date">10/28/2022</p>
-                <p class="order-number">#11223344</p>
-            </div>
-            <div class="past-order-card">
-                <div class="orders-page-line-item">
-                    <h2>Bibimbap</h2>
-                    <h2>$11</h2>
-                </div>
-                <p class="orders-page-details">Beef (+$1)</p>
-                <p class="orders-page-details">Medium Spice</p>
-                <p class="orders-page-details">Note: Please take out sesame seeds!</p>
-                <div class="orders-page-line-item">
-                    <h2>Bulgogi</h2>
-                    <h2>$20</h2>
-                </div>
-                <button class="orders-quick-add">add to cart</button>
             </div>
         </div>
         <p class="orders-thank-you">Order again soon :)</p>
