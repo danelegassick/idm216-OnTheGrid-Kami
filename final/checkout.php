@@ -11,10 +11,16 @@ $drinks = get_drinks();
             <h1>Choose your pickup time!</h1>
             <img class="cut-off-logo" src="<?php echo site_url(); ?>/dist/images/cut-off-logo.png" alt="">
         </div>
-        <button class="pickup-select">
-            12:30pm (ASAP)
-            <img src="<?php echo site_url(); ?>/dist/images/downarrow.svg" alt="down arrow">
-        </button>
+        <span class="custom-select">
+            <select>    
+                <option value="0">
+                Select your pickup time!
+                </option>
+                <option value="1" id='option-1'></option>  
+                <option value="2" id='option-2'></option>
+                <option value="3" id='option-3'></option>
+            </select>
+        </span>
         <div class="order-totals">
             <div class="order-title">
                 <h2 class="all-caps"><?php echo $_SESSION['user']['first_name']; ?>'S ORDER</h2>
@@ -34,13 +40,23 @@ $drinks = get_drinks();
                 <p>$13</p>
             </div>
             <div class="order-line-item tip-selection">
-                <p>Tip</p>
-                <div class="tip-option">15<span class="tip-percent">%</span></div>
-                <div class="tip-option selected-tip">18<span class="tip-percent">%</span></div>
-                <div class="tip-option">20<span class="tip-percent">%</span></div>
-                <div class="tip-option">
-                    <img class="custom-tip" src="<?php echo site_url(); ?>/dist/images/edit-tip.svg" alt="edit tip icon">
-                </div>
+                <p class="tip-first-label">Tip</p>
+                <label class="tip-option-button">
+                    <input type="radio" name="tip-option-radio" class="tip-option-radio"/>
+                    <span class="tip-option-text">15</span><span class="tip-percent">%</span>
+                </label>
+                <label class="tip-option-button">
+                    <input type="radio" name="tip-option-radio" class="tip-option-radio" checked="true"/>
+                    <span class="tip-option-text">18</span><span class="tip-percent">%</span>
+                </label>
+                <label class="tip-option-button">
+                    <input type="radio" name="tip-option-radio" class="tip-option-radio"/>
+                    <span class="tip-option-text">20</span><span class="tip-percent">%</span>
+                </label>
+                <label class="tip-option-button">
+                    <input type="radio" name="tip-option-radio" class="tip-option-radio"/>
+                    <span class="tip-option-image"><img class="custom-tip" src="<?php echo site_url(); ?>/dist/images/edit-tip.svg" alt="edit tip icon"></span><span class="tip-percent">%</span>
+                </label>
                 <p>$2.16</p>
             </div>
             <hr class="order-totals-hr">
@@ -71,16 +87,13 @@ $drinks = get_drinks();
                 </button>
             </div>
         </div>
-        <div class="add-to-cart align-center-flex">
-            <div class="stepper">
-                <!-- Microinteraction goes here -->
-            </div>
-            
-                <a class="btn-dark" href="<?php echo site_url();?>/confirming-loading.php">
-                    <p>Checkout </p>
-                    <p> $15.16 </p>
+        <div class="add-to-cart align-center-flex">            
+            <a class="btn-dark" href="<?php echo site_url();?>/confirming-loading.php">
+                <p>Checkout </p>
+                <p> $15.16 </p>
         </a>
         </div>
 </div>
+<script src="<?php echo site_url(); ?>/dist/scripts/pickuptime.js"></script>
 
 <?php include_once __DIR__ . '/_components/footer.php'; ?>
