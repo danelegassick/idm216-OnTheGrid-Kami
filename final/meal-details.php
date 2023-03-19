@@ -127,12 +127,12 @@ $site_url = site_url();
                         <h1 class="stepper-display">(..)</h1>
                         <div class="stepper-plus">+</div>
                     </div>
-                    </div>
                     <a class="btn-dark" href="<?php echo site_url();?>/cart.php">
                       <p>Add to cart </p>
                       <p>$9 </p>
                     </a>
             </div>
+        </div>
     </div>
   </form>
 </div>      

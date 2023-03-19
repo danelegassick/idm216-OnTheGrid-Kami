@@ -2245,7 +2245,7 @@ a {
     background-color: #000000;
     align-items: center;
     justify-content: center;
-    margin: 1rem 1rem 0 1rem;
+    margin: 1rem 1rem 0 0;
     border-radius: 5rem;
     max-height: 3.5rem;
 }
