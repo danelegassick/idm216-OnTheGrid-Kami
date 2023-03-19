@@ -200,15 +200,16 @@ hr {
 @media screen and (max-width: 750px) {
   .nav-cart {
     margin-left: auto;
-    height: 44px;
-    width: 44px;
+    height: 35px;
+    width: 35px;
+    margin-top: 5px;
   }  
 
   .nav-cart svg{
     display: flex;
     align-self: center;
-    height: 44px;
-    width: 44px;
+    height: 35px;
+    width: 35px;
     
   }
  
@@ -624,6 +625,10 @@ hr {
 .item-description, .customization-container {
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.food-detail-text {
+    padding: 1rem;
   }
 
 .inline {
@@ -742,7 +747,6 @@ hr {
     border-radius: 10px;
     overflow: auto;
     float: left;
-    
 }
 
 .protein-grid #ck-button input:checked + span {
@@ -1465,9 +1469,10 @@ border-open {
     filter: grayscale(100%);
     opacity: 50%;
     width: 80%;
-    max-width: 500px;
     display: block;
     margin: 0 auto;
+    max-width: 200px;
+    height: auto;
 }
 
 .sign-up-cta {
@@ -1508,7 +1513,7 @@ border-open {
     touch-action: manipulation;
     vertical-align: baseline;
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     z-index: 0;
 
   }
@@ -1525,7 +1530,6 @@ border-open {
   
   .btn-dark:hover {
     transform: translateY(-1px);
-    /* transform: translateY(-3px); */
   }
   
   .btn-dark:active {
@@ -1652,10 +1656,6 @@ border-open {
   max-width: 44px;
 }
 
-.icon-small {
-  max-width: 16px;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -1680,7 +1680,13 @@ border-open {
   top: 30px;
   width: 90%;
   margin-left: 40px;
+}
 
+@media only screen and (min-width: 450px) {
+  .wait-time{
+    max-width: 418px;
+    margin: auto;
+  }
 }
 
 .kami-today {
@@ -1731,14 +1737,25 @@ border-open {
   margin-left: auto;
 }
 
+.card-content h4{
+  font-family: 'Poppins-Medium', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+}
+
 .pick {
   position: absolute;
-  padding: 0 10px;
+  padding: 0 12px;
   max-height: 50px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 8px;
   margin-top: 10px;
   margin-left: 10px;
+}
+
+.pick p{
+  font-family: 'Poppins-Medium', sans-serif;
+  font-size: 16px;
 }
 
 .pagination {
@@ -1789,10 +1806,12 @@ border-open {
   overflow: hidden;
   height: clamp(fit-content, 350px ,200px);
   border: 2px solid #000000;
+  background-color: #FFF3D1;
   display: grid;
   grid-template-columns: 4fr 6fr;
   grid-template-rows: 1fr; 
   margin-bottom: 1.5rem;
+  max-width: 500px;
 }
 
 .food-card-image {
@@ -1819,12 +1838,15 @@ border-open {
 .food-card-title {
   display: flex;
   justify-content: space-between;
+  font-family: 'Poppins-Medium', sans-serif;
+  font-size: 16px;
+  padding: 0 10px;
 }
 
 .food-card-desc {
   text-align: left;
   font-size: 0.875rem;
-  padding-bottom: 44px;
+  padding: 0 10px 44px 10px;
 }
 
 .quick-add-btn {
@@ -1833,6 +1855,50 @@ border-open {
   position: absolute;
   bottom: 1rem;
   right: 1rem;}
+
+
+  @media only screen and (min-width: 750px) {
+    .wait-time{
+      display: none;
+    }
+    .kami-today{
+      display: none;
+    }
+    .carousel{
+      margin-top: 20px;
+    }
+    .pick{
+      border: 1px solid #000000;
+      border-radius: 0px 8px 8px 0px; 
+      margin-left: -1px;
+    }
+    .card-content{
+        justify-content: flex-end;
+        width: 30%;
+        margin-left: 70%;
+        margin-bottom: 10px;
+        border: 1px solid #000000;
+        border-radius: 8px 0px 0px 8px; 
+        margin-right: -1px;
+    }
+    .todays-pick{
+      height: 290px;
+    }
+    .card-img{
+      height: 290px;
+    }
+    .menu-sections{
+      max-width: 718px;
+      margin: auto;
+    }
+    .food-section{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .food-card{
+      margin: 10px;
+    }
+  }
 
 .menu {
   padding: 0rem 1rem;
@@ -1865,8 +1931,8 @@ a {
 
 .back-icon {
   margin-right: auto;
-  height: 44px;
-  width: 44px;
+  max-height: 34px;
+  max-width: 34px;
 }
 
 .back-icon img{
@@ -1875,7 +1941,6 @@ a {
   height: 44px;
   width: 44px;
 }
-
 
 /* CART CSS */
 
