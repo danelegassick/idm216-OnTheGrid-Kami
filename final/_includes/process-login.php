@@ -30,10 +30,10 @@ if ($newUser) {
         'first_name' => $newUser['first_name'],
     ];
 
-    // redirect_to('/checkout.php');   
+    redirect_to('/checkout.php');   
 } else {
     $error_message = 'User was not logged in: ' . mysqli_error($db_connection);
-    // redirect_to('/auth/login.php?error=' . $error_message);
+    redirect_to('/auth/login.php?error=' . $error_message);
 }
 
 
