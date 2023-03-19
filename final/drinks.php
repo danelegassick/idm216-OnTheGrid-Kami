@@ -19,7 +19,7 @@ $drinks = get_drinks();
         <img src="<?php echo site_url() . '/dist/images/card-food.png';?>" alt="Tteok-bok-ki" class="card-img">
         <div class="pick">
             <img src="<?php echo site_url() . '/dist/images/sparkles.svg';?>" alt="sparkles" class="icon-small inline-block">
-            <p class="inline-block">Todays pick</p>
+            <p class="inline-block">Today&apos;s pick</p>
         </div>
         <div class="card-content">
             <h4>Tteok bok ki</h4>

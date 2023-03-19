@@ -123,9 +123,9 @@ $site_url = site_url();
 <!-- ADD TO CART -->
             <div class="add-to-cart">
                     <div class="stepper">
-                        <div class="stepper-minus">-</div>
-                        <h1 class="stepper-display">(..)</h1>
-                        <div class="stepper-plus">+</div>
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                        <input class="stepper-display" min="0" name="quantity" value="1" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                     </div>
                     <a class="btn-dark" href="<?php echo site_url();?>/cart.php">
                       <p>Add to cart </p>
