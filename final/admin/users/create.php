@@ -40,7 +40,7 @@ include_once __DIR__ . '/../../_components/header-back.php';
         <br>
         
             <div class="align-center">
-            <button type="submit" class="button width-300"> 
+            <button type="submit" class="btn-dark align-center width-300"> 
                 Create Account
             </button> 
             </div>    
