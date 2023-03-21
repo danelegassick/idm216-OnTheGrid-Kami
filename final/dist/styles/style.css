@@ -2079,14 +2079,23 @@ a {
 /* cart item image size */
 .cart-item-image {
   width: 77px;
+  border-radius: 100%;
 }
 
 /* quantity number  */
 .quantity {
   position: absolute;
-  bottom: -7px;
-  left: 12px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -12px;
+  left: 0px;
   color: var(--white);
+  background-color: var(--accent-green);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
   font-weight: bold;
 }
 
@@ -2447,4 +2456,14 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 1rem;
     margin: 0 0.25rem;
     font-weight: 500;
+}
+
+.delete-button-style {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
