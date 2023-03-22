@@ -1,12 +1,12 @@
 <?php
 include_once __DIR__ . '/app.php';
 
-function RedirectToURL($url, $waitmsg = 0)
-{
-    header("Refresh:$waitmsg; URL= $url");
-    exit;
-}
-?>
+// function RedirectToURL($url, $waitmsg = 0)
+// {
+//     header("Refresh:$waitmsg; URL= $url");
+//     exit;
+// }
+// ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,8 +42,17 @@ function RedirectToURL($url, $waitmsg = 0)
 
 </body>
 
-<?php 
+<script>
+
+setTimeout(function(){
+    console.log("function ran");
+    window.location = "<?php echo site_url(); ?>/order-confirmation.php"
+}, 4500);
+
+</script>
+
+<!-- <?php 
 // sleep(2);
 RedirectToURL(site_url() . "/order-confirmation.php", 4.5);
-?>
+?> -->
 </html>

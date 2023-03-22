@@ -32,7 +32,7 @@ while ($item = mysqli_fetch_assoc($order_items)) {
             <div class='in-progress-body'>
                 <p class='order-number'>#11223344</p>
                 <div class='current-order-details'>
-                    <h1 class='order-name'>Jervo's Order</h1>
+                    <h1 class='order-name'>Your Order</h1>
                 </div>";
                 echo"<h3 class='current-order-details'>Total: $";echo"{$item['final_total']}</h3>";
                 include __DIR__ . '/../_components/orderConfirmationItem.php';

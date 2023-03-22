@@ -45,7 +45,28 @@ function is_user_logged_in()
 
 function getCartItems($orderId){
     global $db_connection;
-    $query ="SELECT 
+//     $query ="SELECT 
+//     cart_item.id AS cart_item_id, 
+//     menu.id AS menu_item_id, 
+//     cart_item.quantity, 
+//     cart_item.protein, 
+//     cart_item.note, 
+//     menu.category, 
+//     menu.name, 
+//     menu.price,
+//     menu.imageUrl,
+//     cart_item.spice_level
+// FROM 
+//     cart_item 
+// INNER JOIN 
+//     menu ON cart_item.menu_id = menu.id 
+// WHERE 
+//     cart_item.order_id = '{$orderId}'";
+
+//     $result = mysqli_query($db_connection, $query);
+//     return $result;
+
+$query ="SELECT 
     cart_item.id AS cart_item_id, 
     menu.id AS menu_item_id, 
     cart_item.quantity, 
@@ -62,10 +83,14 @@ INNER JOIN
     menu ON cart_item.menu_id = menu.id 
 WHERE 
     cart_item.order_id = '{$orderId}'";
+
+$result = mysqli_query($db_connection, $query);
+return $result;
+
     // var_dump($query);
+    // echo "<br>";
+    // var_dump($result);
     // die;
-    $result = mysqli_query($db_connection, $query);
-    return $result;
 }
 
 function getOrderItems($userId){

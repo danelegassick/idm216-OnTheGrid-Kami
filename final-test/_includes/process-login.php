@@ -15,15 +15,15 @@ var_dump($userOrder);
 var_dump($newUser['id']);
 var_dump($userOrder['id']);
 
+
 // Check there are no errors with our SQL statement
 if ($newUser) {
     
-    TODO:
+    // TODO:
     //update current user order, replace id with newuser id 
     $query = "UPDATE orders SET user_id = {$newUser['id']} WHERE id = {$userOrder['id']}";
     $result = mysqli_query($db_connection, $query);
-    var_dump($newUser['id']);
-    var_dump($userOrder['id']);
+    var_dump($query);
     delete_user_by_id($user['id']);
     $_SESSION['user'] = [
         'id' => $newUser['id'],
