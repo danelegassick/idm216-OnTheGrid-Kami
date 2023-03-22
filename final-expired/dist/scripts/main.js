@@ -22,15 +22,3 @@ slider.addEventListener('input', function() {
       document.getElementById("flameImg").src = site_url + "/dist/images/hot-flame.svg";
   }
 }, false);
-
-function calculateTip(tipPortion, subtotal) {
-  let tipAmount = tipPortion * subtotal;
-  let totalPlusTip = subtotal + tipAmount;
-  console.log(subtotal, tipAmount);
-  totalPlusTip = (Math.round(totalPlusTip * 100) / 100).toFixed(2);
-  tipAmount = (Math.round(tipAmount * 100) / 100).toFixed(2);
-  document.getElementById("priceHook1").innerHTML = totalPlusTip;
-  document.getElementById("tipHook").innerHTML = tipAmount;
-  document.getElementById("priceHook2").innerHTML = totalPlusTip;
-  document.getElementById("final_price").value = totalPlusTip;
-}

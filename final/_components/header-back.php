@@ -4,7 +4,7 @@
 if (!isset($page_title)) {
     $page_title = '🚨 Missing Title 🚨';
 }
-$site_title = 'IDM 232';
+$site_title = 'KAMI';
 $document_title = $page_title . ' | ' . $site_title; // Home | IDM232
 
 
@@ -27,7 +27,7 @@ $document_title = $page_title . ' | ' . $site_title; // Home | IDM232
 
 <header>
 <div class="nav-background">
-<nav>
+<nav class="back-nav-head">
     <?php 
     include_once __DIR__ . '/nav-variants/back-nav.php'; 
     ?>

@@ -7,7 +7,7 @@
         'icon' => site_url() . '/dist/images/Home.svg'
     ],
     [
-      'title' => 'Orders',
+      'title' => 'Past Orders',
       'url' => site_url() . "/orders.php",
       'icon' => site_url() . '/dist/images/Orders.svg'
     ],

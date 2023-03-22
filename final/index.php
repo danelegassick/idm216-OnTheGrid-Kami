@@ -2,9 +2,20 @@
 include_once __DIR__ . '/app.php';
 $page_title = 'KAMI';
 include_once __DIR__ . '/_components/header.php';
-$meals = get_meals();
-$sides = get_sides();
-$drinks = get_drinks();
+// $meals = get_meals();
+// $sides = get_sides();
+// $drinks = get_drinks();
+?>
+
+<?php 
+// $cart_items = getCartItems($userOrder['id']);
+?>
+
+<?php 
+$query ='SELECT * FROM menu WHERE category = "meal" ORDER BY name';
+$result = mysqli_query($db_connection, $query);
+
+
 ?>
 <div class="menu">
 <div class="wait-time">
@@ -19,7 +30,7 @@ $drinks = get_drinks();
         <img src="<?php echo site_url() . '/dist/images/card-food.png';?>" alt="Tteok-bok-ki" class="card-img">
         <div class="pick">
             <img src="<?php echo site_url() . '/dist/images/sparkles.svg';?>" alt="sparkles" class="icon-small inline-block">
-            <p class="inline-block">Today&apos;s pick</p>
+            <p class="inline-block">Todays pick</p>
         </div>
         <div class="card-content">
             <h4>Tteok bok ki</h4>
@@ -34,11 +45,11 @@ $drinks = get_drinks();
 </div>
         <div class="menu-sections">
             <h4>Meals<hr class="active-menu"></h4>
-            <h4><a href="<?php echo site_url() . '/sides.php';?>">Sides</a><hr></h4>
-            <h4><a href="<?php echo site_url() . '/drinks.php';?>">Drinks</a><hr></h4>
+            <h4><a href="<?php echo site_url() . '/home-sides.php';?>">Sides</a><hr></h4>
+            <h4><a href="<?php echo site_url() . '/home-drinks.php';?>">Drinks</a><hr></h4>
         </div>
         <div class="food-section">
-            <?php include_once __DIR__ . '/_components/meals-menu.php'; ?>
+            <?php include __DIR__ . '/_components/foodItem.php'; ?>
         </div>
 </div>
 

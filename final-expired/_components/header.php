@@ -25,24 +25,13 @@ $document_title = $page_title . ' | ' . $site_title; // Home | IDM232
 <body>
 
 <?php 
-// if (isset($_SESSION['user'])) {
-//     // echo 'Cool Menu Here' . $_SESSION['user']['first_name'];
-//     include __DIR__ . '/main-nav-login.php';
-//   }
-//   else {
-//     include __DIR__ . '/main-nav.php'; 
-//   }
-
-if ($user['isGuest'] == '1') {
-  include __DIR__ . '/main-nav.php'; 
-  // include __DIR__ . '/main-nav-login.php';
-
-}
-else {
-  include __DIR__ . '/main-nav-login.php';
-  // include __DIR__ . '/main-nav.php'; 
-
-}
+if (isset($_SESSION['user'])) {
+    // echo 'Cool Menu Here' . $_SESSION['user']['first_name'];
+    include __DIR__ . '/main-nav-login.php';
+  }
+  else {
+    include __DIR__ . '/main-nav.php'; 
+  }
 ?>
 
 <main>

@@ -2,20 +2,11 @@
 include_once __DIR__ . '/app.php';
 $page_title = 'Orders';
 include_once __DIR__ . '/_components/header.php';
-$meals = get_meals();
-$sides = get_sides();
-$drinks = get_drinks();
+$order_items = getOrderItems($user['id']);
 ?>
-
-
-<?php 
-if (isset($_SESSION['user'])) {
-    // echo 'Cool Menu Here' . $_SESSION['user']['first_name'];
-    include __DIR__ . '/_components/orders/order-logged-in.php';
-  }
-  else {
-    include __DIR__ . '/_components/orders/order-logged-out.php'; 
-  }
-?>
-
+<div class="orders-container">
+   <?php include __DIR__ . '/_components/archivedOrders.php'; ?>
+   </div>
 <?php include_once __DIR__ . '/_components/footer.php'; ?>
+
+   

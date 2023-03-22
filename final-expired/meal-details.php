@@ -2,12 +2,17 @@
 include_once __DIR__ . '/app.php';
 $page_title = 'KAMI';
 include_once __DIR__ . '/_components/header.php';
+$meals = get_meals();
+$sides = get_sides();
+$drinks = get_drinks();
+$restrictions = get_restrictions();
+$spices = get_spices();
+$proteins = get_proteins();
 ?>
 
 <?php
 // get recipes data from database
-// SELECT * FROM menu WHERE category = "meal" ORDER BY name
-$query = "SELECT * FROM menu WHERE id = {$_GET['id']}";
+$query = "SELECT * FROM meals WHERE id = {$_GET['id']}";
 $result = mysqli_query($db_connection, $query);
 if ($result->num_rows > 0) {
     // Get row from results and assign to $recipe variable;
@@ -28,18 +33,18 @@ $site_url = site_url();
                     </a>
             </div>
 
-  <form action="<?php echo site_url();?>/_includes/addToOrder.php" method="POST">
+  <form action="">
 
     <div class="meal-details-container">
 
         <div class="image-description-container">
 
-                    <img class="food-detail-hero" src="<?php echo $meal['imageUrl'];?>" alt="<?php echo $meal['name']?>">
+                    <img class="food-detail-hero" src="<?php echo $site_url . '/dist/images/meals/' . $meal['image'];?>" alt="<?php echo $meal['item_name']?>">
 
                     <div class="item-description">
 
                         <div class="inline">
-                            <h1><?php echo $meal['name']?></h1>
+                            <h1><?php echo $meal['item_name']?></h1>
                             <h1>$<?php echo $meal['price']?></h1>
                         </div>
 
@@ -53,9 +58,6 @@ $site_url = site_url();
                     </div>
         <br>
         </div>
-
-        <?php if($meal['category'] !== "drink") : ?>
-
         
         <div class="customization-container">
                     <!-- <div class="spice-container"> -->
@@ -76,106 +78,58 @@ $site_url = site_url();
                             </div>
                     
                             <div class="slidecontainer">
-                                <input type="range" min="1" max="3" value="1" class="slider mild" id="myRange" name="spice_level">
+                                <input type="range" min="1" max="3" value="1" class="slider mild" id="myRange">
                             </div>
                           
                         </div>
 
-                        <?php endif; ?>
-
-
                     <!-- </div> -->
-
-                    <?php if($meal['category'] == "meal")  : ?>
-
         
                     <!-- <div class="protein-container"> -->
                         <div class="protein-title title-container">
                             <h2 class="food-detail-title">Add protein (+$1)</h2>
                         </div>
 
-
-            <div class="protein-grid customization-field">
-
-                    <!-- protein inputs -->
-                <div id='ck-button'>
-                    <label for="chicken<?php echo $meal['id']; ?>">
-                        <input type="radio" value="Chicken"  id="chicken<?php echo $meal['id']; ?>" name="protein">
-                        <span>
-                            <img src='<?php echo site_url(); ?>/dist/images/protein-chicken.svg' alt='chicken'>
-                            <p>Chicken</p>
-                        </span>
-                    </label>
-                </div>
-
-                <div id='ck-button'>
-                    <label for="beef<?php echo $meal['id']; ?>">
-                        <input type="radio" value="Beef"  id="beef<?php echo $meal['id']; ?>" name="protein">
-                        <span>
-                            <img src='<?php echo site_url(); ?>/dist/images/protein-beef.svg' alt='beef'>
-                            <p>Beef</p>
-                        </span>
-                    </label>
-                </div>
-
-                <div id='ck-button'>
-                    <label for="tofu<?php echo $meal['id']; ?>">
-                        <input type="radio" value="Tofu"  id="tofu<?php echo $meal['id']; ?>" name="protein">
-                        <span>
-                            <img src='<?php echo site_url(); ?>/dist/images/protein-tofu.svg' alt='tofu'>
-                            <p>Tofu</p>
-                        </span>
-                    </label>
-                </div>
-
-            </div>
-
-            <?php endif; ?>
-
+                        <div class="protein-grid customization-field">
+                            <?php include_once __DIR__ . '/_components/food-details/protein.php'; ?>
+                        </div>
                         
                     <br>
                     <!-- </div> -->
 
                     <!-- <div class="diet-container"> -->
 
-                            <!-- <div class="diet-title title-container">
+                            <div class="diet-title title-container">
                               <h2 class="food-detail-title">Select Dietary Needs</h2>
                             </div>
                             <div class="checkbox-container customization-field">
                             <?php include_once __DIR__ . '/_components/food-details/diet-restrictions.php'; ?>
-                            </div> -->
+                            </div>
                     <br>
                     <!-- </div> -->
 
                     <!-- <div class="note-container"> -->
 
-                    <div class="note-title title-container">
-                        <h2 class="food-detail-title">Add a note</h2>
-                    </div>
+                            <div class="note-title title-container">
+                              <h2 class="food-detail-title">Add a note</h2>
+                            </div>
                     
-                    <div class="note-box customization-field">
-                        <input class="notes-field" type="text" id="notes" name="note" placeholder="Add Note...">
-                    </div>
-                    
-                    <input name="menu_id" value="<?php echo $meal['id']; ?>" type="hidden"/>
-
-                    <input name="order_id" value="<?php echo $userOrder['id']; ?>" type="hidden"/>
-
-                    <input id="quantity-input<?php echo $meal['id']; ?>"name="quantity" value="1" type="hidden"/>
+                            <div class="note-box customization-field">
+                              <input class="notes-field" type="text" id="notes" name="notes" placeholder="Add Note...">
+                            </div>
                     <!-- </div> -->
-
         <br>           
         </div>
 <!-- ADD TO CART -->
             <div class="add-to-cart">
                     <div class="stepper">
-                        <div class="stepper-minus">-</div>
-                        <h1 class="stepper-display">(..)</h1>
-                        <div class="stepper-plus">+</div>
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                        <input class="stepper-display" min="0" name="quantity" value="1" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                     </div>
-                    <button type="submit" class="btn-dark" href="<?php echo site_url();?>/cart.php">
+                    <a class="btn-dark" href="<?php echo site_url();?>/cart.php">
                       <p>Add to cart </p>
-                      <p>$ <?php echo $meal['price']; ?></p>
+                      <p>$9 </p>
                     </a>
             </div>
         </div>

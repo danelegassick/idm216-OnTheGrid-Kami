@@ -1,9 +1,6 @@
-
 <?php
 include __DIR__ . '/../app.php';
 // Destroy any current session
-session_destroy();
-
 $_SESSION = [];
-// redirect to homepage
-redirect_to('/');
+session_destroy();
+redirect_to('/index.php');

@@ -1,32 +1,9 @@
 <?php
-/**
- * This file will hold all the functions for your project.
- */
-
- function get_project_path()
- {
-     global $APP_CONFIG;
-     if ($APP_CONFIG['environment'] === 'development') {
-         return $_SERVER['DOCUMENT_ROOT'] . '/idm216/final';
-     } else {
-         return $_SERVER['DOCUMENT_ROOT'] . '/final';
-     }
- }
-
-/**
- * Get the site URL defined in your .env file
- * @return string - The site URL | example: http://localhost:8888/final
- */
 function site_url()
 {
     global $APP_CONFIG;
     return $APP_CONFIG['site_url'];
 }
-
-/**
- * Redirect to any path
- * @param  string $path - The path to redirect to
- */
 
 function redirect_to($path)
 {
@@ -36,25 +13,22 @@ function redirect_to($path)
     echo "<script>window.location = '$full_url';</script>";
     exit;
 }
-
-/**
- * Get current project root directory path
- * @return string - The path to the project root directory
- */
 function project_root()
 {
     return dirname(__FILE__);
 }
 
-/**
- * return date and time in the correct
- * mysqi 'datetime' format
- *
- * @return string
- */
 function getFormattedDateTime()
 {
     return  date('Y-m-d H:i:s');
+}
+
+function get_recipes()
+{
+    global $db_connection;
+    $query = 'SELECT * FROM meals';
+    $result = mysqli_query($db_connection, $query);
+    return $result;
 }
 
 function sanitize_value($value)
@@ -63,10 +37,79 @@ function sanitize_value($value)
     return mysqli_real_escape_string($db_connection, $value);
 }
 
-/**
- * Check if user is logged in via session
- */
 function is_user_logged_in()
 {
+    
     return isset($_SESSION['user']);
 }
+
+function getCartItems($orderId){
+    global $db_connection;
+//     $query ="SELECT 
+//     cart_item.id AS cart_item_id, 
+//     menu.id AS menu_item_id, 
+//     cart_item.quantity, 
+//     cart_item.protein, 
+//     cart_item.note, 
+//     menu.category, 
+//     menu.name, 
+//     menu.price,
+//     menu.imageUrl,
+//     cart_item.spice_level
+// FROM 
+//     cart_item 
+// INNER JOIN 
+//     menu ON cart_item.menu_id = menu.id 
+// WHERE 
+//     cart_item.order_id = '{$orderId}'";
+
+//     $result = mysqli_query($db_connection, $query);
+//     return $result;
+
+$query ="SELECT 
+    cart_item.id AS cart_item_id, 
+    menu.id AS menu_item_id, 
+    cart_item.quantity, 
+    cart_item.protein, 
+    cart_item.note, 
+    menu.category, 
+    menu.name, 
+    menu.price,
+    menu.imageUrl,
+    cart_item.spice_level
+FROM 
+    cart_item 
+INNER JOIN 
+    menu ON cart_item.menu_id = menu.id 
+WHERE 
+    cart_item.order_id = '{$orderId}'";
+
+$result = mysqli_query($db_connection, $query);
+return $result;
+
+    // var_dump($query);
+    // echo "<br>";
+    // var_dump($result);
+    // die;
+}
+
+function getOrderItems($userId){
+    global $db_connection;
+    $query =" SELECT 
+    orders.id, 
+    orders.user_id, 
+    MAX(orders.status) AS status, 
+    orders.final_total, 
+    GROUP_CONCAT(CONCAT(menu.name, ' (', cart_item.quantity, ')', ' - $', menu.price)) AS items_ordered
+    FROM orders 
+    LEFT JOIN cart_item ON orders.id = cart_item.order_id 
+    LEFT JOIN menu ON cart_item.menu_id = menu.id
+    WHERE orders.user_id = '{$userId}' AND orders.status = 'completed'
+    GROUP BY orders.id
+    ORDER BY orders.id DESC;";
+
+    $result = mysqli_query($db_connection, $query);
+    return $result;
+}
+
+?>

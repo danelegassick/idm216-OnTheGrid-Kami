@@ -1,10 +1,10 @@
 <?php
 include_once __DIR__ . '/../app.php';
-$page_title = 'Log In';
+$page_title = 'Sign In';
 include_once __DIR__ . '/../_components/header-back.php';
-$errorMessage = isset($_GET['error']) ? $_GET['error'] : false;
-if ($errorMessage){
-    echo $errorMessage;}
+
+$previousURL = $_SERVER['HTTP_REFERER'];
+
 ?>
 
 <div class="wrapper-top">
@@ -12,11 +12,11 @@ if ($errorMessage){
     <div class="description align-center">
         <img class="logo" src="<?php echo site_url() . '/dist/images/kami-logo.svg';?>">
         <h2 class=""> Sign in to continue to checkout.</h2>
-        <p> First time? <a href="<?php echo site_url() . "/auth/signup.php";?>" class="underline">Create an account.</a></p>
+        <p> First time? <a href="<?php echo site_url() . "/admin/users/create.php";?>" class="underline">Create an account.</a></p>
     </div>
 <!-- Sign in input fields for email and password -->
     <div class="signin align-center-notext">
-        <form action="<?php echo site_url();?>/_includes/process-login.php" method="POST">
+        <form action="<?php echo site_url() . '/_includes/process-login.php' ?>" method="POST">
             <label class="signin-label" name="email">Email</label>
             <br>
             <input class="signin-field" type="text" id="email" name="email" autocomplete="email" required>
@@ -38,4 +38,5 @@ if ($errorMessage){
 </form>
 </div>
 
-    
+
+<?php include_once __DIR__ . '/../_components/footer.php';?>
