@@ -1492,6 +1492,7 @@ max-height: 3.5rem;
 padding: calc(.875rem - 1px) calc(1.5rem - 1px);
 position: static;
 text-decoration: none;
+text-align: center;
 width: 100%;
 
 }

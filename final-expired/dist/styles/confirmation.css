@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+html {
+    padding: 0;
+}
+
 :root {
     /*COLORS*/
     --primary: #000000;
@@ -77,7 +81,10 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-direction: row nowrap;
-    margin: 30px 0 20px 0;
+    margin: -3rem 0 20px 0;
+    position: fixed;
+    top:0 ;
+
 }
 
 .align-center {

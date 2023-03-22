@@ -45,9 +45,9 @@ while ($item = mysqli_fetch_assoc($order_items)) {
                         <p><b>Ready</b></p>
                     </div>
                 </div>
-                <button class='arrived-btn'>
+                <a href='{$site_url}/order-ready.php' class='arrived-btn'>
                     <h2>I have arrived!</h2>
-                </button>
+                </a>
             </div>
         </div>
         <div class='orders-line'>

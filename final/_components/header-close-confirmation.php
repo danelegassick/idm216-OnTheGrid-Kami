@@ -35,6 +35,5 @@ $document_title = $page_title . ' | ' . $site_title; // Home | IDM232
 </div>
 </header>
 
-<main>
 
   <!-- Main Content Begins -->
