@@ -1,0 +1,67 @@
+      /* CSS for the hero image */
+      .hero-image {
+        height: 500px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+        font-size: 3em;
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url("images/hero.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+
+.hero-image * {
+    font-family: "Helvetica Neue", sans-serif;
+
+}
+
+      body {
+        background-color: #F3F2F7;
+        color: #202020;
+        margin: 0;
+        padding: 0;
+    }
+
+      main {
+        max-width: 900px;
+        margin: auto;
+        font-family: "Helvetica Neue", sans-serif;
+      }
+
+      h1 {
+        font-family: "Helvetica Neue", sans-serif;
+      }
+
+      h2 {
+        color: #429a80;
+      }
+
+      p {
+        line-height: 1.5rem;
+        padding-bottom: 1rem;
+      }
+
+      
+
+      /* CSS for the case study sections */
+      .section {
+        padding: 50px;
+        border-bottom: 1px solid #429a80;
+      }
+
+      /* CSS for the image grid */
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+      }
+
+      /* CSS for the iPhone screenshots */
+      .iphone-screenshot {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+      }

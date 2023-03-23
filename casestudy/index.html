@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idm216 Case Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hero-image">
+        <div>
+            <h1>Kami App</h1>
+            <p>idm216 Case Study</p>
+        </div>
+      </div>
+
+    <main>
+    
+      <div class="section">
+        <h2>Overview</h2>
+        <p>
+          For this project, the goal was to create an ordering app for a food truck. Our group for this project chose to base our app off of the Korean food truck, Kami. My role in this project was to be the coder, which involved building html and css pages, a PHP login system, an ordering system, a cart, and linking all of those together.
+        </p>
+
+        <p>
+          The Kami app is a web-based application that allows customers to browse the menu, place orders, and view their order history. The app features a login system for customers to create accounts and securely store their personal information and order history. The app also includes a cart system to add and remove items from the order before checkout. The menu and prices are stored in a database and are dynamically displayed on the website.
+        </p>
+      </div>
+  
+      <div class="section">
+        <h2>The Context and Challenge</h2>
+        <p>
+          The challenge of building the PHP food truck ordering app is to create a seamless and user-friendly interface that allows customers to easily browse the menu, place orders, and track their order history. The combination of the frontend and backend is where the major challenge lies. I not only have to make these systems in PHP, but I also have to ensure the integration is smooth and not easily noticed. Users should be able to focus on the user experience rather than the bugs or clunkiness of the site. The time also provided a major challenge as this project was very lopsided in its timing, with a lot devoted to early development of menu displays and login systems, where the hardest part of the order and cart system had to be done in the shortest amount of time.
+        </p>
+      </div>
+  
+      <div class="section">
+        <h2>The Process and Insight</h2>
+        <p>
+          The first step in building the app is to design the database schema. The database schema needs to be designed to store the menu, cart items, orders, and users in a scalable and efficient manner.
+        </p>
+        <p>
+          Once the database schema is designed, the next step is to implement the backend logic using PHP and MySQL. This involves setting up the database, creating PHP scripts to handle user requests, and integrating the user interface with the backend logic. This started with echoing out the menu items, which was fairly simple running a while loop of every item in each category of meal, side, or drink.
+        </p>
+
+        <p>
+          Next I moved onto the login system which needs to be secure and use hashing and salting to store passwords securely. This started a session with the user that would be closed when the user signed out. This would save their data when they reopened the site, knowing that they were still logged in. This session came into play during the cart development as well. Users should be able to start their order before signing in, so a guest user was created. This guest user's order had to be transferred over when they logged in, so an SQL query was made to transfer the user id to link up in the orders table.
+        </p>
+
+        <p>
+          The cart system needs to be able to handle adding and removing items, calculating the total price, and storing the order until checkout. All of this was managed with a cart page that would go through all of the cart items in the database with a matching order id. This linked up the cart to the orders, and the orders would be linked up to the users.
+        </p>
+
+        <p>
+          The math was done using basic logic ensuring that all of the values were floats before moving through that process. The past orders would list out the cart items, and be segmented by each unique order id.
+        </p>
+      </div>
+  
+      <div class="section">
+        <h2>The Solution</h2>
+        <p>
+          To create a seamless and user-friendly ordering app for Kami, I started by designing the database schema to efficiently store the menu, cart items, orders, and users. I then implemented the backend logic using PHP and MySQL, setting up the database, creating PHP scripts to handle user requests, and integrating the user interface with the backend logic.
+        </p>
+
+        <!-- <div class="image-grid">
+          <img class="iphone-screenshot" src="images/home-swift.png" alt="iPhone Screenshot 1">
+          <img class="iphone-screenshot" src="images/settings-swift.png" alt="iPhone Screenshot 2">
+          <img class="iphone-screenshot" src="images/settings-swift-light.png" alt="iPhone Screenshot 3">
+
+        </div> -->
+
+        <p>
+          For the frontend, I built some html and css pages to display the menu and login system implementing other code from fellow group mates to fill out the rest of the site. I also did work building out multiple microinteractions including a time drop down and a spice level selector. The menu items and prices were dynamically displayed on the website by fetching the data from the database.
+        </p>
+
+        <!-- <div class="image-grid">
+            <img class="iphone-screenshot" src="images/note-swift.png" alt="iPhone Screenshot 4">
+            <img class="iphone-screenshot" src="images/add-note-swift.png" alt="iPhone Screenshot 5">
+          </div> -->
+
+        <p>
+          The login system was designed to be secure and used hashing and salting to store passwords securely. It also created a session with the user that would be closed when the user signed out. A guest user was also created so that users could start their order before signing in. When a guest user logged in, their order was transferred over by an SQL query to link up in the orders table.
+        </p>
+
+        <p>
+          The cart system was designed to handle adding and removing items, calculating the total price, and storing the order until checkout. A cart page was created that would go through all of the cart items in the database with a matching order id, linking up the cart to the orders and the orders to the users. The math was done using basic logic and ensuring that all of the values were floats before moving through that process.
+        </p>
+
+      </div>
+
+      <div class="section">
+        <h2>The Results</h2>
+        <p>
+          The final result was a functional and user-friendly ordering app for the Kami food truck. The app was designed with a seamless integration of the frontend and backend systems, allowing for a smooth and enjoyable user experience. The project also provided insights into the importance of database design and the secure handling of user data. By following best practices in these areas, the app was able to provide a secure and efficient ordering system for customers. Overall, the project was a success, and the Kami food truck now has a reliable and effective online ordering system to serve their customers.
+        </p>
+        <p>
+          All of it can be viewed at this link: <a href="https://danelegassick.com/idm216/final/">https://danelegassick.com/idm216/final/</a>
+        </p>
+      </div>
+    </main>
+</body>
+</html>
